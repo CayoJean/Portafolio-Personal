@@ -1,0 +1,82 @@
+/* General */
+body, html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Header */
+header {
+    text-align: center;
+    padding: 20px 0;
+}
+
+/* Animación de caída */
+.falling-text {
+    opacity: 0; /* Inicialmente invisible */
+    transform: translateY(-100px); /* Empieza desde arriba */
+    animation: fallAnimation 1s ease-out forwards;
+}
+
+/* Keyframes para la animación */
+@keyframes fallAnimation {
+    0% {
+        opacity: 0;
+        transform: translateY(-100px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Retrasos en la animación */
+header .falling-text:nth-child(1) {
+    animation-delay: 0.2s; /* Logo */
+}
+
+header .falling-text:nth-child(2) {
+    animation-delay: 0.4s; /* Portafolio */
+}
+
+header nav .falling-text {
+    animation-delay: 0.6s; /* Links del menú */
+}
+
+#inicio .falling-text:nth-child(1) {
+    animation-delay: 0.8s; /* Título principal */
+}
+
+#inicio .falling-text:nth-child(2) {
+    animation-delay: 1s; /* Párrafo */
+}
+
+.redes .falling-text {
+    animation-delay: 1.2s; /* Íconos de redes */
+}
+
+
+
+.falling-text {
+    opacity: 0;
+    transform: translateY(-100px);
+    animation: fallAnimation 1s ease-out forwards;
+}
+
+@keyframes fallAnimation {
+    0% {
+        opacity: 0;
+        transform: translateY(-100px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Retrasos escalonados */
+.falling-text:nth-child(1) { animation-delay: 0.2s; }
+.falling-text:nth-child(2) { animation-delay: 0.4s; }
+.falling-text:nth-child(3) { animation-delay: 0.6s; }
+.falling-text:nth-child(4) { animation-delay: 0.8s; }
+.falling-text:nth-child(5) { animation-delay: 1s; }

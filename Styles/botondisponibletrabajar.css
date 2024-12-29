@@ -1,0 +1,95 @@
+/* Contenedor del nav con flexbox */
+nav {
+    display: flex;
+    flex-direction: column; /* Alinea los elementos verticalmente */
+    justify-content: center; /* Centra verticalmente */
+    align-items: center; /* Centra horizontalmente */
+    padding: 10px 20px;
+}
+
+/* Estilo del menú */
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li a {
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    transition: color 0.3s ease-in-out;
+}
+
+nav ul li a:hover {
+    color: #4caf50; /* Verde */
+}
+
+/* Contenedor del icono de disponibilidad */
+.availability-bubble {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Centra horizontalmente */
+    margin-top: 15px;
+    cursor: pointer;
+}
+
+/* Texto de disponibilidad */
+.availability-bubble span {
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+    margin-left: 10px;
+    white-space: nowrap;
+}
+
+/* Círculo */
+.availability-bubble .circle {
+    width: 20px;
+    height: 20px;
+    background-color: #4caf50;
+    border-radius: 50%;
+    position: relative;
+    animation: bubble 1.5s infinite ease-in-out;
+    box-shadow: 0 0 10px rgba(76, 175, 80, 0.5), 0 0 20px rgba(76, 175, 80, 0.3);
+}
+
+
+/* Eliminar subrayado y cambiar color por defecto del enlace */
+.availability-link {
+    text-decoration: none;
+    color: inherit; /* Hereda el color del texto del padre */
+    display: inline-block; /* Asegura que todo el contenedor sea clicable */
+}
+
+/* Efecto hover para el enlace */
+.availability-link:hover .circle {
+    box-shadow: 0 0 15px rgba(76, 175, 80, 0.9);
+}
+
+.availability-link:hover .falling-text {
+    color: #4caf50; /* Cambia el color del texto al pasar el cursor */
+}
+
+
+/* Animación de burbujeo */
+@keyframes bubble {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.2);
+    }
+}
+
+/* Animación de flotación */
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-5px);
+    }
+}

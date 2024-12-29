@@ -1,0 +1,362 @@
+/* Estilos para las redes sociales */
+.redesocial {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+}
+
+.redesocial li {
+    display: inline-block; /* Asegura que los li estén en línea */
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+    
+}
+
+.redesocial .icon {
+    position: relative;
+    background-color: #fefcff;
+    border-radius: 50%;
+    padding: 35px;
+    margin: 15px;
+    width: 3px;
+    height: 3px;
+    font-size: 38px;
+    box-shadow: 0 20px 20px rgba(0, 255, 0, 0.1);
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.redesocial .tooltip {
+    position: absolute;
+    bottom: 115%; /* Ajusta este valor para acercar el tooltip */
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 14px;
+    background: #ffffff;
+    color: #000000;
+    padding: 5px 8px;
+    border-radius: 5px;
+    box-shadow: 0 10px 10px rgba(0,0,0,0.1);
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s cubic-bezier(0.68,-0.55,0.265,1.55);
+}
+
+
+.redesocial .tooltip::before {
+    position: absolute;
+    content: "";
+    height: 8px;
+    width: 8px;
+    background: #ffffff;
+    bottom: -3px;
+    left: 50%;
+    transform: translateX(-50%) rotate(45deg);
+    transition: all 0.3s cubic-bezier(0.68,-0.55,0.265,1.55);
+}
+
+.redesocial .icon:hover .tooltip {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+}
+
+
+/* FACEBOOK */
+/* Asegura que el enlace cubra todo el área del ícono */
+.redesocial .facebook a {
+    display: block;
+    width: 30px;
+    height: 40px;
+    color: #003cff; /* Color del ícono en negro */
+    text-decoration: none; /* Quitar el subrayado del enlace */
+    background-color: transparent; /* Fondo transparente */
+}
+
+/* Estilo al pasar el mouse por encima del ícono de Facebook */
+.redesocial .facebook:hover {
+    
+    background-color: #0414fd; /* Fondo negro al pasar el cursor */
+    
+}
+
+/* Cambiar el color del ícono a blanco cuando se pasa el cursor */
+.redesocial .facebook:hover a {
+    color: #ffffff; /* Color del ícono en blanco al pasar el cursor */
+}
+
+/* Cambiar el color de la tooltip al pasar el cursor */
+.redesocial .facebook:hover .tooltip,
+.redesocial .facebook:hover .tooltip::before {
+    background: #0414fd; /* Fondo negro para la tooltip */
+    color: #ffffff; /* Texto blanco en la tooltip */
+}
+
+
+
+/* TWITTER o X */
+/* Asegura que el enlace cubra todo el área del ícono */
+.redesocial .twitter a {
+    display: block;
+    width: 30px;
+    height: 40px;
+    color: #000000; /* Color del ícono en negro */
+    text-decoration: none; /* Quitar el subrayado del enlace */
+    background-color: transparent; /* Fondo transparente */
+}
+
+/* Estilo al pasar el mouse por encima del ícono de Facebook */
+.redesocial .twitter:hover {
+    background-color: #070707; /* Fondo negro al pasar el cursor */
+}
+
+/* Cambiar el color del ícono a blanco cuando se pasa el cursor */
+.redesocial .twitter:hover a {
+    color: #ffffff; /* Color del ícono en blanco al pasar el cursor */
+}
+
+/* Cambiar el color de la tooltip al pasar el cursor */
+.redesocial .twitter:hover .tooltip,
+.redesocial .twitter:hover .tooltip::before {
+    
+    background: #070707; /* Fondo negro para la tooltip */
+    color: #ffffff; /* Texto blanco en la tooltip */
+}
+
+
+
+/* Instagram */
+/* Asegura que el enlace cubra todo el área del ícono */
+.redesocial .instagram a {
+    display: block;
+    width: 30px;
+    height: 40px;
+    color: #e4405f; /* Color del ícono en negro */
+    text-decoration: none; /* Quitar el subrayado del enlace */
+    background-color: transparent; /* Fondo transparente */
+}
+
+/* Estilo al pasar el mouse por encima del ícono de Facebook */
+.redesocial .instagram:hover {
+    background-color: #e4405f; /* Fondo negro al pasar el cursor */
+}
+
+/* Cambiar el color del ícono a blanco cuando se pasa el cursor */
+.redesocial .instagram:hover a {
+    color: #ffffff; /* Color del ícono en blanco al pasar el cursor */
+}
+
+/* Cambiar el color de la tooltip al pasar el cursor */
+.redesocial .instagram:hover .tooltip,
+.redesocial .instagram:hover .tooltip::before {
+    background: #e4405f; /* Fondo negro para la tooltip */
+    color: #ffffff; /* Texto blanco en la tooltip */
+}
+
+
+
+
+
+/* GitHub */
+.redesocial .github a {
+    display: block;
+    width: 30px;
+    height: 40px;
+    color: #333333; /* Color del ícono de GitHub */
+    text-decoration: none;
+    background-color: transparent;
+}
+
+.redesocial .github:hover {
+    background-color: #833ab4;
+}
+
+.redesocial .github:hover a {
+    color: #ffffff;
+}
+
+.redesocial .github:hover .tooltip,
+.redesocial .github:hover .tooltip::before {
+    background: #833ab4;
+    color: #ffffff;
+}
+
+/* YouTube */
+
+.redesocial .youtube a {
+    display: flex; /* Asegura que el ícono esté centrado */
+    justify-content: center;
+    align-items: center;
+    font-size: 36px; /* Tamaño del ícono */
+    color: #cd201f; /* Color del ícono */
+    text-decoration: none; /* Elimina el subrayado */
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+
+.redesocial .youtube:hover {
+    background-color: #cd201f;
+}
+
+.redesocial .youtube:hover a {
+    color: #ffffff;
+}
+
+.redesocial .youtube:hover .tooltip,
+.redesocial .youtube:hover .tooltip::before {
+    background: #cd201f;
+    color: #ffffff;
+}
+
+/* Discord */
+.redesocial .discord a {
+    display: flex; /* Asegura que el ícono esté centrado */
+    justify-content: center;
+    align-items: center;
+    font-size: 36px; /* Tamaño del ícono */
+    color: #0036f8; /* Color del ícono de Discord */
+    text-decoration: none; /* Elimina el subrayado */
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+
+.redesocial .discord:hover {
+    background-color: #0005fa;
+}
+
+.redesocial .discord:hover a {
+    color: #ffffff;
+}
+
+.redesocial .discord:hover .tooltip,
+.redesocial .discord:hover .tooltip::before {
+    background: #0005fa;
+    color: #ffffff;
+}
+
+/* WhatsApp */
+.redesocial .whatsApp a {
+    display: block;
+    width: 32px;
+    height: 40px;
+    color: #25d366; /* Color del ícono de WhatsApp */
+    text-decoration: none;
+    background-color: transparent;
+}
+
+.redesocial .whatsApp:hover {
+    background-color: #2bf702;
+}
+
+.redesocial .whatsApp:hover a {
+    color: #ffffff;
+}
+
+.redesocial .whatsApp:hover .tooltip,
+.redesocial .whatsApp:hover .tooltip::before {
+    background: #2bf702;
+    color: #ffffff;
+}
+
+
+
+/* Linkedin */
+/* Asegura que el enlace cubra todo el área del ícono */
+.redesocial .linkedin a {
+    display: block;
+    width: 28px;
+    height: 40px;
+    color: #1100ff; /* Color del ícono en negro */
+    text-decoration: none; /* Quitar el subrayado del enlace */
+    background-color: transparent; /* Fondo transparente */
+}
+
+/* Estilo al pasar el mouse por encima del ícono de Facebook */
+.redesocial .linkedin:hover {
+    background-color: #0414fd; /* Fondo negro al pasar el cursor */
+}
+
+/* Cambiar el color del ícono a blanco cuando se pasa el cursor */
+.redesocial .linkedin:hover a {
+    color: #ffffff; /* Color del ícono en blanco al pasar el cursor */
+}
+
+/* Cambiar el color de la tooltip al pasar el cursor */
+.redesocial .linkedin:hover .tooltip,
+.redesocial .linkedin:hover .tooltip::before {
+    
+    background: #0414fd; /* Fondo negro para la tooltip */
+    color: #ffffff; /* Texto blanco en la tooltip */
+}
+
+/*FIN de REDES SOCIALES*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Estilos generales */
+.redesocial {
+    list-style: none;
+    display: flex;
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente */
+    flex-wrap: wrap; /* Permite que los íconos salten de línea si no caben */
+    padding: 20px;
+    margin: 30px;
+    width: 100%;
+}
+
+
+
+.redesocial .icon:hover {
+    transform: scale(1.1); /* Efecto suave al pasar el cursor */
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.3);
+}
+
+.redesocial .icon:hover .tooltip {
+    opacity: 1;
+}
+
+/* Responsividad específica para celulares */
+@media (max-width: 768px) {
+    .redesocial .icon {
+        padding: 40px; /* Tamaño reducido para celulares */
+        font-size: 45px; /* Íconos más grandes */
+        margin: 8px;
+    }
+
+    .redesocial .tooltip {
+        font-size: 10px; /* Tooltip más pequeño */
+    }
+}
+
+@media (max-width: 480px) {
+    .redesocial .icon {
+        padding: 35px; /* Ajuste de tamaño más pequeño */
+        font-size: 40px;
+        margin: 5px;
+    }
+
+    h2 {
+        font-size: 35px; /* Ajusta el título 'Contacto' para móviles */
+        text-align: center;
+    }
+}

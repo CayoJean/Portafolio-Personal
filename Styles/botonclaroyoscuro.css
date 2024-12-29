@@ -1,0 +1,27 @@
+/* Botón de cambio en Modo Claro */
+body.light-mode #theme-toggle {
+    background-color: #000000; /* Fondo azul */
+    color: white; /* Texto blanco */
+}
+
+/* Botón de cambio en Modo Oscuro */
+body.dark-mode #theme-toggle {
+    background-color: #ffffff; /* Fondo naranja */
+    color: black; /* Texto negro */
+}
+
+/* Transiciones suaves para el cambio de estilo */
+#theme-toggle {
+    cursor: pointer;
+    margin: 5px;
+    padding: 5px 7px;
+    border: none;
+    border-radius: 50px;
+    font-size: 18px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+#theme-toggle:hover {
+    background-color: #00f2fe; /* Fondo celeste al pasar el mouse */
+    color: white;
+}

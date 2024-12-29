@@ -1,0 +1,32 @@
+.scroll-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #00ff15;
+    color: white;
+    border: none;
+    border-radius: 30%;
+    padding: 10px;
+    font-size: 25px;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease-in-out;
+    z-index: 1000;
+}
+
+.scroll-to-top.show {
+    opacity: 1;
+    visibility: visible;
+    animation: pulsate 1.5s infinite; /* Animación de brillo */
+}
+
+@keyframes pulsate {
+    0%, 100% {
+        box-shadow: 0 0 10px rgba(33, 150, 243, 0.7);
+    }
+    50% {
+        box-shadow: 0 0 20px rgb(0, 140, 255);
+    }
+}

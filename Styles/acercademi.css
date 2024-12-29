@@ -1,0 +1,29 @@
+/* Estilos generales para la sección */
+#acercademi {
+    max-width: 800px;
+    margin: 0 auto; /* Centra el contenedor */
+    padding: 20px;
+    padding: 75px 20px;
+    text-align: center; /* Centra el texto */
+}
+
+
+
+/* Estilos para el título */
+#acercademi h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+/* Estilos para el párrafo */
+#acercademi p {
+    font-size: 1.125rem;
+    line-height: 1.6;
+    text-align: center; /* Justifica el texto */
+}
+
+/* Estilos adicionales */
+#acercademi p:first-letter {
+    font-size: 1.5rem;
+    font-weight: bold;
+}

@@ -1,0 +1,52 @@
+/* Contenedor de tarjetas de habilidades */
+.habilidades-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    max-width: 1500px;
+    margin: 0 auto;
+}
+
+.habilidades {
+    font-size: 1px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 90px;
+    text-align: center;
+    padding: 0px;
+    transition: transform 0.3s ease;
+}
+
+.habilidades:hover {
+    transform: translateY(-5px);
+}
+
+.habilidades img {
+    max-width: 60%;
+    border-radius: 8px;
+    margin: 4px;
+}
+
+.habilidades h3 {
+    margin-top: 10px;
+    /* font-size: 1.0rem; */
+    font-size: 12px;
+}
+
+.habilidades p {
+    font-size: 1rem;
+}
+
+
+
+
+
+
+/* RESPONSIVE */
+@media screen and (max-width: 768px) {
+    .habilidades h3 {
+        font-size: 13px;
+    }
+}

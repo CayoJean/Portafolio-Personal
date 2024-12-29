@@ -1,0 +1,63 @@
+/* Botón de Desplácese hacia abajo */
+.scroll-down-btn {
+    position: absolute;
+    justify-content: center; /* Posición en la izquierda */
+    bottom: 30px; /* Ajusta la distancia desde la parte inferior */
+    display: flex;
+    align-items: center;
+    color: #48ff00;
+    font-size: 16px;
+    text-decoration: none;
+    font-weight: bold;
+    
+}
+
+.scroll-down-btn i {
+    margin-right: 8px; /* Espacio entre el icono y el texto */
+    font-size: 20px;
+    animation: bounce 1.5s infinite; /* Efecto de rebote */
+}
+
+/* Efecto de escala al pasar el mouse */
+.scroll-down-btn:hover {
+    color: #00ffcc; /* Cambia el color al pasar el mouse */
+    transform: scale(1.1); /* Aumenta ligeramente el tamaño */
+}
+
+/* Animación de rebote */
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-10px);
+    }
+    60% {
+        transform: translateY(-5px);
+    }
+}
+
+/* RESPONSIVE */
+@media screen and (max-width: 768px) {
+
+    .availability-bubble span {
+        font-size: 20px; /* Tamaño más pequeño del texto */
+    }
+
+    /* Botón de Desplácese hacia abajo */
+    .scroll-down-btn {
+        position: absolute;
+        justify-content: center;
+        /* Posición en la izquierda */
+        bottom: 30px;
+        /* Ajusta la distancia desde la parte inferior */
+        display: flex;
+        align-items: center;
+        color: #48ff00;
+        font-size: 25px;
+        text-decoration: none;
+        font-weight: bold;
+
+
+    }
+}

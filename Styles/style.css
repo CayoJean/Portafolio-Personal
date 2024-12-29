@@ -1,0 +1,27 @@
+@import url('header.css');
+@import url('dezlisacambiacolor.css');
+@import url('modosclaroyoscuro.css');
+@import url('botonclaroyoscuro.css');
+@import url('iconoslunaysol.css');
+@import url('inicio.css');
+@import url('acercademi.css');
+@import url('habilidades.css');
+@import url('footer.css');
+@import url('seccionesgenerales.css');
+@import url('logo.css');
+@import url('redessociales.css');
+@import url('redes.css');
+@import url('particles.css');
+@import url('efectomovimientogeneral.css');
+@import url('botonflecha.css');
+@import url('botondisponibletrabajar.css');
+@import url('idiomasespañolingles.css');
+@import url('desplieguecercademi.css');
+@import url('cv.css');
+@import url('loadercarga.css');
+
+/* Estilos generales */ 
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}

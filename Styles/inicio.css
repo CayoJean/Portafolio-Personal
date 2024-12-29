@@ -1,0 +1,180 @@
+/* Sección de Inicio */
+#inicio { 
+    max-width: 800px;
+    margin: 0 auto; /* Centra el contenedor */
+    padding: 75px 50px; /* Espaciado interno */
+    text-align: center; /* Centra el contenido */
+}
+
+/* Título */
+#inicio h1 {
+    font-size: 3rem; /* Tamaño grande para pantallas normales */
+    margin-bottom: 10px;
+    line-height: 1.2; /* Espaciado entre líneas */
+    
+}
+
+/* Párrafo */
+#inicio p {
+    font-size: 1.2rem;
+    line-height: 1.6; /* Mejora la lectura */
+    margin-bottom: 15px;
+    text-align: center; /* Centra el texto */
+    
+}
+
+/* Animación opcional si el navegador lo soporta */
+@supports (animation-timeline: view()) {
+    h1 {
+        animation: init-blur .4s ease;
+        text-shadow: .4rem .4rem 0 var(--primary);
+    }
+}
+
+/* Redes Sociales */
+.redes {
+    display: flex;
+    justify-content: center; /* Centra los íconos */
+    gap: 20px; /* Espaciado entre íconos */
+    margin-top: 20px;
+}
+
+.redes a {
+    font-size: 2rem; /* Tamaño de los íconos */
+    
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.redes a:hover {
+    transform: scale(1.2); /* Efecto de zoom */
+    color: #00ff00; /* Cambio de color al pasar el mouse */
+}
+
+/* Botón de desplazarse hacia abajo */
+.scroll-down-btn {
+    display: inline-block;
+    margin-top: 20px;
+    font-size: 1.1rem;
+    color: #00ff00;
+    text-decoration: none;
+    transition: transform 0.3s ease;
+}
+
+.scroll-down-btn i {
+    font-size: 1.5rem;
+    margin-right: 5px;
+}
+
+.scroll-down-btn:hover {
+    transform: translateY(5px); /* Efecto de movimiento */
+}
+
+
+
+
+
+
+/*Modo claro*/
+/* Estilos generales para los enlaces del menú */
+.nav-link {
+    color: #333; /* Color por defecto de los enlaces */
+    text-decoration: none;
+    transition: color 0.3s ease; /* Transición suave al cambiar de color */
+}
+
+/* Color al pasar el mouse sobre los enlaces */
+.nav-link:hover {
+    color: #0004ff; /* Color al pasar el mouse */
+}
+
+/* Color específico para el enlace "Inicio" por defecto */
+.nav-link[data-key="navInicio"] {
+    color: #0004ff; /* Color personalizado para el enlace "Inicio" */
+}
+
+/* Opcional: Mantener el color al pasar el mouse sobre "Inicio" */
+.nav-link[data-key="navInicio"]:hover {
+    color: #0004ff; /* Color diferente al pasar el mouse sobre "Inicio" */
+}
+
+
+
+
+
+/* Colores para Modo Oscuro */
+body.dark-mode .nav-link {
+    color: #ccc; /* Color por defecto en oscuro */
+}
+
+body.dark-mode .nav-link:hover {
+    color: #0004ff; /* Color al pasar el mouse en oscuro */
+}
+
+body.dark-mode .nav-link[data-key="navInicio"] {
+    color: #0004ff; /* Color para "Inicio" en oscuro */
+}
+
+body.dark-mode .nav-link[data-key="navInicio"]:hover {
+    color: #0004ff; /* Color al pasar el mouse sobre "Inicio" en oscuro */
+}
+
+
+
+
+
+
+
+
+
+
+
+/* Media Queries para dispositivos pequeños */
+
+/* Tablets y dispositivos medianos */
+@media (max-width: 768px) {
+    #inicio h1 {
+        font-size: 3rem; /* Tamaño grande para pantallas normales */
+        margin-bottom: 10px; /*-----------------------*/
+        line-height: 1.2; /* Espaciado entre líneas */
+        position: relative; /* Posición absoluta para mayor control */
+        top: 20px; /* Ajusta la posición desde la parte superior */
+        right: 1px; /* Alinea el botón hacia la derecha */; /* Asegura que esté por encima de otros elementos */
+    }
+
+    #inicio p {
+        font-size: 18px; /* Reducir tamaño del texto */
+    }
+
+    .redes a {
+        font-size: 1.8rem; /* Íconos más pequeños */
+        margin-bottom: 10px; /*-----------*/
+        line-height: 1.2; /* Espaciado entre líneas */
+        position: relative; /* Posición absoluta para mayor control */
+        top: -8px; /* Ajusta la posición desde la parte superior */
+        right: 1px; /* Alinea el botón hacia la derecha */; /* Asegura que esté por encima de otros elementos */
+    }
+}
+
+/* Teléfonos y dispositivos pequeños */
+@media (max-width: 480px) {
+    #inicio {
+        padding: 50px 20px; /* Reducir el padding */
+    }
+
+    #inicio h1 {
+        font-size: 2rem; /* Título más pequeño */
+    }
+
+    #inicio p {
+        font-size: 18px; /* Ajustar tamaño del texto */
+        line-height: 1.4;
+    }
+
+    .redes a {
+        font-size: 1.5rem; /* Íconos más pequeños */
+    }
+
+    .scroll-down-btn {
+        font-size: 0.9rem;
+    }
+}
