@@ -1,27 +1,140 @@
 @import url('header.css');
-@import url('dezlisacambiacolor.css');
-@import url('modosclaroyoscuro.css');
-@import url('botonclaroyoscuro.css');
-@import url('iconoslunaysol.css');
 @import url('inicio.css');
+@import url('cv.css');
 @import url('acercademi.css');
 @import url('habilidades.css');
-@import url('footer.css');
-@import url('seccionesgenerales.css');
-@import url('logo.css');
 @import url('redessociales.css');
-@import url('redes.css');
-@import url('particles.css');
-@import url('efectomovimientogeneral.css');
+@import url('footer.css');
 @import url('botonflecha.css');
-@import url('botondisponibletrabajar.css');
+@import url('dezlisacambiadecolor.css');
 @import url('idiomasespañolingles.css');
-@import url('desplieguecercademi.css');
-@import url('cv.css');
+@import url('efectomovimientogeneral.css');
 @import url('loadercarga.css');
+@import url('three.css');
 
-/* Estilos generales */ 
-body {
-    margin: 0;
-    font-family: Arial, sans-serif;
+
+
+
+/* Ocultar el botón de menú en pantallas grandes */
+@media screen and (min-width: 769px) {
+    .menu-toggle {
+        display: none; /* Oculta el botón de menú en pantallas grandes */
+    }
+}
+
+
+
+/* RESPONSIVE */
+@media screen and (max-width: 768px) {
+    /* Botón hamburguesa visible */
+    .menu-toggle {
+        display: block;
+        color: red; /* Color del ícono */
+        position: absolute;
+        top: 40px; /* Mantiene la misma posición debajo del botón de modos */
+        right: 8px; /* Alinea el botón hacia la derecha dentro del header */
+        font-size: 30px; /* Tamaño del ícono */
+        cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+        z-index: 1000; /* Asegura que esté por encima de otros elementos */
+        background: none; /* Quita el fondo */
+        border: none; /* Quita el borde */
+        outline: none; /* Quita el borde de enfoque */
+        transition: transform 0.3s ease; /* Transición para el cambio de tamaño */
+    }
+
+    .menu-toggle:hover,
+    .menu-toggle:focus {
+        background: none; /* Elimina cualquier fondo que aparezca en hover o focus */
+        outline: none; /* Asegura que no haya borde de enfoque */
+        transform: scale(1.2); /* Aumenta el tamaño del ícono al pasar el mouse */
+    }
+
+    /* Botón de Modo Oscuro/Claro */
+    #theme-toggle {
+        background: none;
+        border: none;
+        position: absolute;
+        top: 20px; /* Encima del botón hamburguesa */
+        right: 4px; /* Alinea el botón hacia la derecha */
+        font-size: 1.3rem; /* Tamaño del ícono */
+        color: white;
+        cursor: pointer;
+        z-index: 1000; /* Asegura que esté por encima de otros elementos */
+        transition: color 0.3s ease;
+    }
+
+    #theme-toggle:hover {
+        color: #ff4747; /* Cambiar color al pasar el mouse */
+    }
+
+    /* Menú desplegable superpuesto */
+    .nav-menu {
+        display: none;
+        position: fixed; /* Fija el menú sin afectar al contenido */
+        top: 125px; /* Ajusta la posición debajo del header */
+        left: 0;
+        border-radius: 35px;
+        width: 100%; /* Ocupa todo el ancho */
+        height: calc(100% - 125px); /* Ajusta la altura */
+        background-color: rgba(0, 17, 255, 0.9); /* Fondo oscuro con opacidad */
+        text-align: center;
+        padding-top: 20px;
+        z-index: 999; /* Asegura que esté por encima del contenido */
+    }
+
+    /* Cuando el menú está activo */
+    .nav-menu.active {
+        display: block;
+    }
+
+    .nav-menu ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        flex-direction: column; /* Elementos en columna */
+        gap: 15px;
+    }
+
+    .nav-menu ul li {
+        margin: 10px 0;
+    }
+
+    .nav-menu ul li a {
+        font-size: 1.8rem; /* Tamaño específico del texto */
+        text-decoration: none;
+        color: white;
+        transition: color 0.3s ease;
+    }
+
+    .nav-menu ul li a:hover {
+        color: #ff4747; /* Color al pasar el mouse */
+    }
+
+    /* Logo */
+    header .logo {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    header .logo img {
+        height: 50px; /* Tamaño de la imagen */
+        margin-right: 10px;
+    }
+
+    header .logo h1 {
+        font-size: 1.5rem;
+        color: white;
+        margin: 0;
+    }
+
+    /* Contenedor de botones */
+    .header-buttons {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end; /* Alineado a la derecha */
+        gap: 10px;
+        margin-right: 20px;
+    }
 }

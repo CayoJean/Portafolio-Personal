@@ -1,52 +1,101 @@
+/* Centrar toda la sección de habilidades */
+#habilidades {
+    display: flex;
+    flex-direction: column; /* Organiza los elementos verticalmente */
+    align-items: center; /* Centra los elementos horizontalmente */
+    justify-content: center; /* Centra los elementos verticalmente */
+    min-height: 100vh; /* Ocupa toda la altura de la pantalla */
+    padding: 80px; /* Espacio interno para evitar bordes pegados */
+}
+
 /* Contenedor de tarjetas de habilidades */
 .habilidades-container {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: center; /* Centra las tarjetas horizontalmente */
     gap: 20px;
-    max-width: 1500px;
-    margin: 0 auto;
+    max-width: 1400px;
+    margin-top: -38px;
 }
 
+/* Estilo para cada tarjeta de habilidad */
 .habilidades {
     font-size: 1px;
     border: 1px solid #ddd;
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    width: 90px;
-    text-align: center;
-    padding: 0px;
+    width: 50px;
+    text-align: center; /* Centra el texto dentro de cada tarjeta */
+    padding: 1px; /* Espacio interno para las tarjetas */
     transition: transform 0.3s ease;
+    display: flex;
+    flex-direction: column; /* Organiza imagen y texto en columna */
+    align-items: center; /* Centra horizontalmente el contenido */
+    justify-content: center; /* Centra verticalmente el contenido */
 }
 
 .habilidades:hover {
     transform: translateY(-5px);
 }
 
+/* Ajusta las imágenes dentro de las tarjetas */
 .habilidades img {
-    max-width: 60%;
+    max-width: 50%;
     border-radius: 8px;
-    margin: 4px;
+    margin: 0 auto; /* Centra la imagen horizontalmente */
 }
 
+/* Títulos dentro de las tarjetas */
 .habilidades h3 {
-    margin-top: 10px;
-    /* font-size: 1.0rem; */
-    font-size: 12px;
+    margin-top: 12px;
+    font-size: 8px;
+    font-weight: bold;
+    text-align: center; /* Centra el texto */
 }
 
-.habilidades p {
-    font-size: 1rem;
+.habilidades-section h4 {
+    margin-top: 1px;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center; /* Centra el texto */
+}
+
+/* Títulos principales */
+.main-title, .section-title {
+    text-align: center;
+    margin: -10px auto; /* Centra los títulos y añade espacio */
+    font-size: 1.8rem;
 }
 
 
 
-
-
-
-/* RESPONSIVE */
+/* Responsive */
+/* Estilos específicos para móviles */
 @media screen and (max-width: 768px) {
+    /* Sección de habilidades */
+    #habilidades {
+        padding: 10px;
+    }
+
+    /* Títulos más pequeños */
+    .main-title, .section-title {
+        font-size: 1.5rem;
+    }
+
+    /* Habilidades dentro del contenedor */
+    .habilidades {
+        width: 45px; /* Reducir el tamaño de las tarjetas */
+        font-size: 1rem; /* Reducir el tamaño del texto */
+        padding: 4px;
+    }
+
+    /* Títulos dentro de las tarjetas */
     .habilidades h3 {
-        font-size: 13px;
+        font-size: 9px; /* Hacer los títulos más pequeños */
+    }
+
+    /* Ajustes adicionales */
+    .habilidades img {
+        max-width: 40%; /* Reducir tamaño de imagen */
     }
 }

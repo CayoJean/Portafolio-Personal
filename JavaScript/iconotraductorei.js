@@ -1,3 +1,10 @@
+// Al cargar la página, verifica si hay un idioma guardado en localStorage
+document.addEventListener("DOMContentLoaded", function() {
+    const savedLanguage = localStorage.getItem('language') || 'es';  // Si no hay idioma guardado, se usa el español por defecto
+    changeLanguage(savedLanguage);  // Aplica el idioma guardado
+});
+
+// Eventos de clic para cambiar el idioma
 document.getElementById('btn-es').addEventListener('click', function() {
     changeLanguage('es');
 });
@@ -6,7 +13,11 @@ document.getElementById('btn-en').addEventListener('click', function() {
     changeLanguage('en');
 });
 
+// Función para cambiar el idioma
 function changeLanguage(language) {
+    // Guarda el idioma seleccionado en localStorage
+    localStorage.setItem('language', language);
+
     if (language === 'es') {
         // Cambiar a español (ejemplo)
         document.querySelectorAll('.nav-link').forEach(function(link) {
@@ -52,14 +63,14 @@ function changeLanguage(language) {
 
         const aboutMeDescription = document.querySelector('[data-key="aboutMeDescription"]');
         if (aboutMeDescription) {
-            aboutMeDescription.innerText = 
-                'Programación Full Stack, con conocimiento práctico en lenguajes de programación y capacidad de ' +
-                'entender nuevas tecnologías rápidamente y la facultad de trabajar en un entorno de equipo. ' +
-                'Mi viaje en el mundo de la tecnología comenzó con una fascinación por crear soluciones que no solo ' +
-                'funcionan de manera eficiente, sino que también brindan una experiencia de usuario convincente. ' +
-                'A medida que continúa mi viaje en el desarrollo Full Stack, siempre estoy buscando proyectos y ' +
-                'oportunidades colaborativas en los que pueda contribuir con mis habilidades y crecer tanto personal ' +
-                'como profesionalmente. ¡Conectémonos y exploremos cómo podemos crear algo increíble juntos!';
+            aboutMeDescription.innerText =
+            "Soy un Programador Full Stack Developer Junior, con conocimientos prácticos en Front-End (HTML, CSS y JAVASCRIPT) " +
+            "y Back-End (Java, Spring Boot y Spring Security) y con capacidad de entender nuevas tecnologías rápidamente " +
+            "y la facultad de trabajar en un entorno de equipo. Mi viaje en el mundo de la tecnología comenzó con una fascinación " +
+            "por crear soluciones que no solo funcionan de manera eficiente, sino que también brindan una experiencia de usuario convincente. " +
+            "A medida que continúa mi viaje en el desarrollo Full Stack, siempre estoy buscando proyectos y oportunidades colaborativas " +
+            "en los que pueda contribuir con mis habilidades y crecer tanto personal como profesionalmente. ¡Conectémonos y exploremos cómo " +
+            "podemos crear algo increíble juntos!";
         }
 
         // Traducir "Habilidades"
@@ -68,10 +79,51 @@ function changeLanguage(language) {
             technicalSkillsTitle.innerText = 'Habilidades Técnicas';
         }
 
+
+        // Traducir "Herramientas"
+        const toolsTitleEs = document.querySelector('[data-key="toolsTitle"]');
+        if (toolsTitleEs) {
+        toolsTitleEs.innerText = 'Herramientas'; // En español
+        }
+
+
+        // Traducir "habilidades blandas" español
         const softSkillsTitle = document.querySelector('[data-key="softSkillsTitle"]');
         if (softSkillsTitle) {
             softSkillsTitle.innerText = 'Habilidades Blandas';
         }
+        
+
+
+        // Traducir "Adaptabilidad" ESPAÑOL
+        const adaptabilityTitleEs = document.querySelector('[data-key="adaptabilityTitle"]');
+        if (adaptabilityTitleEs) {
+        adaptabilityTitleEs.innerText = 'Adaptabilidad'; // En español
+        }
+
+
+        // Traducir "Dedicación" ESPAÑOL
+        const dedicatedTitleEs = document.querySelector('[data-key="dedicatedTitle"]');
+        if (dedicatedTitleEs) {
+        dedicatedTitleEs.innerText = 'Dedicado'; // En español
+        }
+
+
+        // Traducir "Ética Profesional" ESPAÑOL
+        const professionalEthicsTitleEs = document.querySelector('[data-key="professionalEthicsTitle"]');
+        if (professionalEthicsTitleEs) {
+        professionalEthicsTitleEs.innerText = 'Ética Profesional'; // En español
+        }
+
+
+
+        // Traducir "Trabajo en Equipo" ESPAÑOL
+        const teamworkTitleEs = document.querySelector('[data-key="teamworkTitle"]');
+        if (teamworkTitleEs) {
+        teamworkTitleEs.innerText = 'Trabajo en Equipo'; // En español
+        }
+
+
 
         // Traducir "Contacto"
         const contactTitle = document.querySelector('[data-key="contactTitle"]');
@@ -95,6 +147,15 @@ function changeLanguage(language) {
         if (downloadCVButton) {
             downloadCVButton.innerText = 'Descargar CV';
         }
+
+
+        // Traducir el texto del botón "Scroll Down" al español
+        const scrollDownButton = document.querySelector('.scroll-down-btn');
+        if (scrollDownButton) {
+        scrollDownButton.innerHTML = '<i class="fas fa-chevron-down"></i> Desplácese hacia abajo';
+        scrollDownButton.setAttribute('title', 'Ir a Acerca De Mí'); // Cambia el atributo 'title' al español
+        }
+
 
         document.querySelector('h1').innerText = 'Portafolio.👨‍💻';
     } else if (language === 'en') {
@@ -142,13 +203,14 @@ function changeLanguage(language) {
 
         const aboutMeDescription = document.querySelector('[data-key="aboutMeDescription"]');
         if (aboutMeDescription) {
-            aboutMeDescription.innerText = 
-                'Full Stack programming, with practical knowledge in programming languages and the ability to ' +
-                'understand new technologies quickly and work in a team environment. My journey into the world of ' +
-                'technology began with a fascination for creating solutions that not only work efficiently but also ' +
-                'provide a compelling user experience. As my journey continues in Full Stack development, I am always ' +
-                'looking for projects and collaborative opportunities where I can contribute with my skills and grow ' +
-                'both personally and professionally. Let\'s connect and explore how we can create something amazing together!';
+            aboutMeDescription.innerText =
+            "I am a Junior Full Stack Developer with practical knowledge in Front-End (HTML, CSS, and JAVASCRIPT) " +
+            "and Back-End (Java, Spring Boot, and Spring Security), with the ability to understand new technologies quickly " +
+            "and the capacity to work in a team environment. My journey into the world of technology began with a fascination " +
+            "for creating solutions that not only work efficiently but also provide a compelling user experience. As my journey " +
+            "continues in Full Stack development, I am always looking for projects and collaborative opportunities where I can " +
+            "contribute with my skills and grow both personally and professionally. Let's connect and explore how we can create " +
+            "something amazing together!";
         }
 
         // Traducir "Habilidades"
@@ -157,10 +219,50 @@ function changeLanguage(language) {
             technicalSkillsTitle.innerText = 'Technical Skills';
         }
 
+
+
+        // Traducir "Herramientas"
+        const toolsTitle = document.querySelector('[data-key="toolsTitle"]');
+        if (toolsTitle) {
+        toolsTitle.innerText = 'Tools'; // En inglés
+        }
+
+        // Traducir "habilidades blandas" INGLES
         const softSkillsTitle = document.querySelector('[data-key="softSkillsTitle"]');
         if (softSkillsTitle) {
             softSkillsTitle.innerText = 'Soft Skills';
         }
+
+        // Traducir "Adaptabilidad" INGLES
+        const adaptabilityTitle = document.querySelector('[data-key="adaptabilityTitle"]');
+        if (adaptabilityTitle) {
+        adaptabilityTitle.innerText = 'Adaptability'; // En inglés
+        }
+
+
+        // Traducir "Dedicado" INGLES
+        const dedicatedTitle = document.querySelector('[data-key="dedicatedTitle"]');
+        if (dedicatedTitle) {
+        dedicatedTitle.innerText = 'Dedicated'; // En inglés
+        }
+
+
+
+        // Traducir "Ética Profesional"
+        const professionalEthicsTitle = document.querySelector('[data-key="professionalEthicsTitle"]');
+        if (professionalEthicsTitle) {
+        professionalEthicsTitle.innerText = 'Professional Ethics'; // En inglés
+        }
+
+
+
+        // Traducir "Trabajo en Equipo"
+        const teamworkTitle = document.querySelector('[data-key="teamworkTitle"]');
+        if (teamworkTitle) {
+        teamworkTitle.innerText = 'Teamwork'; // En inglés
+        }
+
+
 
         // Traducir "Contacto"
         const contactTitle = document.querySelector('[data-key="contactTitle"]');
@@ -180,14 +282,24 @@ function changeLanguage(language) {
         }
 
         document.querySelector('h1').innerText = 'Portfolio.👨‍💻';
-    }
 
 
         // Traducir Descargar CV. a ingles
         const downloadCVButton = document.querySelector('[data-key="downloadCV"]');
         if (downloadCVButton) {
-            downloadCVButton.innerText = 'Download CV';
+        downloadCVButton.innerText = 'Download CV';
         }
+
+
+        // Traducir el texto del botón "Desplácese hacia abajo" al inglés
+        const scrollDownButton = document.querySelector('.scroll-down-btn');
+        if (scrollDownButton) {
+        scrollDownButton.innerHTML = '<i class="fas fa-chevron-down"></i> Scroll Down';
+        scrollDownButton.setAttribute('title', 'Go to About Me'); // Traduce el atributo 'title'
+        }
+
+    }
+
 
     // Reaplicar el efecto falling-text después de la traducción
     document.querySelectorAll('.falling-text').forEach(function(element) {
@@ -195,5 +307,4 @@ function changeLanguage(language) {
         void element.offsetWidth; // Forzar el reflow
         element.classList.add('falling-text');
     });
-    
 }

@@ -1,29 +1,50 @@
 /* Estilos generales para la sección */
 #acercademi {
-    max-width: 800px;
-    margin: 0 auto; /* Centra el contenedor */
-    padding: 20px;
-    padding: 75px 20px;
-    text-align: center; /* Centra el texto */
+    display: flex;                 /* Habilita flexbox */
+    flex-direction: column;        /* Alinea contenido en columna */
+    justify-content: center;       /* Centra verticalmente */
+    align-items: center;           /* Centra horizontalmente */
+    height: 100vh;                 /* Toma toda la altura de la pantalla */
+    padding: 20px;                 /* Espaciado interno */
+    text-align: center;            /* Centra el texto */
+    /*background-color: #f9f9f9;     /* Fondo claro (ajústalo si tienes modo oscuro) */
 }
 
-
-
-/* Estilos para el título */
 #acercademi h2 {
-    font-size: 2.5rem;
-    margin-bottom: 20px;
+    margin-bottom: 20px;           /* Espacio entre el título y el párrafo */
+    font-size: 2.5em;              /* Tamaño del título */
+    margin-top: 140px;
 }
 
-/* Estilos para el párrafo */
 #acercademi p {
-    font-size: 1.125rem;
-    line-height: 1.6;
-    text-align: center; /* Justifica el texto */
+    font-size: 20px;              /* Tamaño del texto */
+    line-height: 1.6;              /* Espaciado entre líneas */
+    max-width: 800px;
+    font-weight: bold;              /* Limita el ancho del texto */
 }
 
-/* Estilos adicionales */
-#acercademi p:first-letter {
-    font-size: 1.5rem;
-    font-weight: bold;
+
+
+
+
+
+@media screen and (max-width: 768px) {
+
+    /* Título */
+        #acercademi h2 {
+            font-size: 1.8rem;
+            /* Tamaño grande para pantallas normales */
+            margin-bottom: 10px;
+            margin-top: 180px;
+            line-height: 1.2;
+            /* Espaciado entre líneas */
+        }
+
+
+        #acercademi p {
+            font-size: 16px;              /* Tamaño del texto */
+            line-height: 1.6;              /* Espaciado entre líneas */
+            
+            font-weight: bold;              /* Limita el ancho del texto */
+        }
 }

@@ -1,16 +1,3 @@
-/* General */
-body, html {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-/* Header */
-header {
-    text-align: center;
-    padding: 20px 0;
-}
-
 /* Animación de caída */
 .falling-text {
     opacity: 0; /* Inicialmente invisible */

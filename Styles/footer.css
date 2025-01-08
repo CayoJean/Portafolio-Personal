@@ -6,3 +6,13 @@ footer {
     bottom: 0;
     width: 100%;
 }
+
+footer .container {
+    margin: 0; /* Elimina el margen de la container */
+    padding: 0; /* Elimina el padding de la container */
+}
+
+footer p {
+    margin: 8px; /* Elimina el margen de los párrafos */
+    padding: 0; /* Elimina el padding de los párrafos */
+}

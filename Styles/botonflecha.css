@@ -22,11 +22,28 @@
     animation: pulsate 1.5s infinite; /* Animación de brillo */
 }
 
+#scrollToTop:hover {
+    background-color: #000000; /* Color cuando el mouse pasa sobre el ícono */
+}
+
 @keyframes pulsate {
     0%, 100% {
         box-shadow: 0 0 10px rgba(33, 150, 243, 0.7);
     }
     50% {
-        box-shadow: 0 0 20px rgb(0, 140, 255);
+        box-shadow: 0 0 20px rgb(0, 0, 0);
+    }
+}
+
+
+
+/* Estilo para el ícono en modo oscuro */
+@media (prefers-color-scheme: dark) {
+    #scrollToTop {
+        color: #fff; /* Color en modo oscuro */
+    }
+
+    #scrollToTop:hover {
+        background-color: #002fff; /* Color en modo oscuro cuando pasa el mouse */
     }
 }

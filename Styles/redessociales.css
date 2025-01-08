@@ -1,12 +1,43 @@
-/* Estilos para las redes sociales */
+/* Estilos generales */
 .redesocial {
     list-style: none;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 0;
-    margin: 0;
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente */
+    flex-wrap: wrap; /* Permite que los íconos salten de línea si no caben */
+    padding: 5px;
+    margin: -30px;
+    width: 50%;
 }
+
+
+
+
+
+#contacto {
+    display: flex;
+    flex-direction: column; /* Coloca los elementos en una columna */
+    justify-content: center; /* Centra verticalmente */
+    align-items: center; /* Centra horizontalmente */
+    height: 100vh; /* La sección ocupa toda la altura de la ventana */
+    text-align: center; /* Centra el texto */
+    font-size: 27px;
+    padding: 40px; /* Espaciado interno opcional */
+    box-sizing: border-box; /* Asegura que el padding no desborde */
+    color: #25d366;
+    margin: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
 
 .redesocial li {
     display: inline-block; /* Asegura que los li estén en línea */
@@ -21,7 +52,6 @@
 
 .redesocial .icon {
     position: relative;
-    background-color: #fefcff;
     border-radius: 50%;
     padding: 35px;
     margin: 15px;
@@ -39,7 +69,6 @@
     left: 50%;
     transform: translateX(-50%);
     font-size: 14px;
-    background: #ffffff;
     color: #000000;
     padding: 5px 8px;
     border-radius: 5px;
@@ -55,7 +84,6 @@
     content: "";
     height: 8px;
     width: 8px;
-    background: #ffffff;
     bottom: -3px;
     left: 50%;
     transform: translateX(-50%) rotate(45deg);
@@ -68,13 +96,18 @@
     pointer-events: auto;
 }
 
+.coctato h2 {
+    align-items: center;
+}
+
 
 /* FACEBOOK */
 /* Asegura que el enlace cubra todo el área del ícono */
 .redesocial .facebook a {
     display: block;
     width: 30px;
-    height: 40px;
+    height: 49px;
+    font-size: 50px;
     color: #003cff; /* Color del ícono en negro */
     text-decoration: none; /* Quitar el subrayado del enlace */
     background-color: transparent; /* Fondo transparente */
@@ -106,7 +139,8 @@
 .redesocial .twitter a {
     display: block;
     width: 30px;
-    height: 40px;
+    height: 49px;
+    font-size: 50px;
     color: #000000; /* Color del ícono en negro */
     text-decoration: none; /* Quitar el subrayado del enlace */
     background-color: transparent; /* Fondo transparente */
@@ -136,8 +170,9 @@
 /* Asegura que el enlace cubra todo el área del ícono */
 .redesocial .instagram a {
     display: block;
-    width: 30px;
-    height: 40px;
+    width: 44px;
+    height: 51px;
+    font-size: 50px;
     color: #e4405f; /* Color del ícono en negro */
     text-decoration: none; /* Quitar el subrayado del enlace */
     background-color: transparent; /* Fondo transparente */
@@ -167,8 +202,9 @@
 /* GitHub */
 .redesocial .github a {
     display: block;
-    width: 30px;
-    height: 40px;
+    width: 48px;
+    height: 54px;
+    font-size: 50px;
     color: #333333; /* Color del ícono de GitHub */
     text-decoration: none;
     background-color: transparent;
@@ -194,7 +230,7 @@
     display: flex; /* Asegura que el ícono esté centrado */
     justify-content: center;
     align-items: center;
-    font-size: 36px; /* Tamaño del ícono */
+    font-size: 50px; /* Tamaño del ícono */
     color: #cd201f; /* Color del ícono */
     text-decoration: none; /* Elimina el subrayado */
     width: 100%;
@@ -221,7 +257,7 @@
     display: flex; /* Asegura que el ícono esté centrado */
     justify-content: center;
     align-items: center;
-    font-size: 36px; /* Tamaño del ícono */
+    font-size: 50px; /* Tamaño del ícono */
     color: #0036f8; /* Color del ícono de Discord */
     text-decoration: none; /* Elimina el subrayado */
     width: 100%;
@@ -246,8 +282,9 @@
 /* WhatsApp */
 .redesocial .whatsApp a {
     display: block;
-    width: 32px;
-    height: 40px;
+    width: 40px;
+    height: 55px;
+    font-size: 50px;
     color: #25d366; /* Color del ícono de WhatsApp */
     text-decoration: none;
     background-color: transparent;
@@ -273,8 +310,9 @@
 /* Asegura que el enlace cubra todo el área del ícono */
 .redesocial .linkedin a {
     display: block;
-    width: 28px;
-    height: 40px;
+    width: 42px;
+    height: 50px;
+    font-size: 50px;
     color: #1100ff; /* Color del ícono en negro */
     text-decoration: none; /* Quitar el subrayado del enlace */
     background-color: transparent; /* Fondo transparente */
@@ -303,29 +341,6 @@
 
 
 
-
-
-
-
-
-
-
-
-
-/* Estilos generales */
-.redesocial {
-    list-style: none;
-    display: flex;
-    justify-content: center; /* Centra horizontalmente */
-    align-items: center; /* Centra verticalmente */
-    flex-wrap: wrap; /* Permite que los íconos salten de línea si no caben */
-    padding: 20px;
-    margin: 30px;
-    width: 100%;
-}
-
-
-
 .redesocial .icon:hover {
     transform: scale(1.1); /* Efecto suave al pasar el cursor */
     box-shadow: 0 15px 25px rgba(0, 0, 0, 0.3);
@@ -335,28 +350,59 @@
     opacity: 1;
 }
 
-/* Responsividad específica para celulares */
-@media (max-width: 768px) {
-    .redesocial .icon {
-        padding: 40px; /* Tamaño reducido para celulares */
-        font-size: 45px; /* Íconos más grandes */
-        margin: 8px;
-    }
 
-    .redesocial .tooltip {
-        font-size: 10px; /* Tooltip más pequeño */
+
+
+
+
+/* Estilos generales para los iconos */
+.redesocial .icon {
+    position: relative;
+    border-radius: 50%;
+    padding: 35px;
+    margin: 15px;
+    width: 3px;
+    height: 3px;
+    font-size: 38px;
+    box-shadow: 0 20px 20px rgba(0, 255, 0, 0.1);
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+/* Estilos para el modo claro (por defecto) */
+@media (prefers-color-scheme: light) {
+    /* Cambiar el fondo de los iconos a gris en modo claro */
+    .redesocial .icon {
+        background-color: #cd201f;
     }
 }
 
-@media (max-width: 480px) {
+/* Estilos para el modo oscuro */
+@media (prefers-color-scheme: dark) {
+    /* Cambiar el fondo de los iconos a blanco en modo oscuro sin afectar el hover */
     .redesocial .icon {
-        padding: 35px; /* Ajuste de tamaño más pequeño */
-        font-size: 40px;
-        margin: 5px;
+        background-color: #fff; /* Fondo blanco */
+    }
+}
+
+
+
+/* Ajuste para pantallas pequeñas (móviles) */
+@media screen and (max-width: 768px) {
+    .redesocial {
+        width: 90%; /* Asegura que los íconos no ocupen más de un 100% del ancho */
     }
 
-    h2 {
-        font-size: 35px; /* Ajusta el título 'Contacto' para móviles */
-        text-align: center;
+    .redesocial li {
+        width: 80%; /* Cada ícono ocupa la mitad del ancho */
     }
+
+
+    /* Estilos generales */
+.redesocial {
+    
+    padding: 5px;
+    margin: -30px;
+    
+}
 }

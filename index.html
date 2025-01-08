@@ -1,10 +1,13 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CayoJean Web</title>
     <link rel="stylesheet" href="/Styles/style.css">
+
+
 
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -13,30 +16,30 @@
 
     
     <!-- es para que el texto escriba solo o actumatico-->
-    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
+
 
 
     <!-- es para el fodo de las particulas -->
-    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-
+    
 
     <!-- Incluir Font Awesome desde el CDN -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-
-
     
+
+
+
 
     <!-- Favicon para navegadores -->
     <link rel="icon" href="/imagenes/code.png" type="image/png">
 
     <!-- Favicon para dispositivos Apple -->
     <link rel="apple-touch-icon" href="doc/CV.pdf" type="image/png">
-
-
+    
 </head>
-<body">
 
-
+<body>
+    
 
 
     <!-- Loader (Pantalla de carga) -->
@@ -44,70 +47,23 @@
     <div class="loader-container" id="loader">
         <div class="circle-loader"></div>
     </div>
-
-
-
-
-
-
-
-    <!-- boton de la flacha de la derecha -->
-    <button id="scrollToTop" class="scroll-to-top">
-        ↑
-    </button>
     
 
 
-    <div id="particles-js"></div>
 
 
 
     <header>
 
-        <div id="language-switcher">
-            <!-- Bandera de Perú -->
-            <div id="btn-es" class="circle-icon" title="Español">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 480">
-                    <g fill-rule="evenodd">
-                        <path fill="#d91023" d="M0 0h213.33v480H0z"/>
-                        <path fill="#fff" d="M213.33 0h213.33v480H213.33z"/>
-                        <path fill="#d91023" d="M426.67 0H640v480H426.67z"/>
-                    </g>
-                </svg>
-            </div>
-            <!-- Bandera de Estados Unidos -->
-            <div id="btn-en" class="circle-icon" title="English">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1235 650">
-                    <rect fill="#b22234" width="1235" height="650"/>
-                    <path fill="#fff" d="M0 72.72h1235v72.72H0zM0 218.18h1235v72.72H0zM0 363.63h1235v72.72H0zM0 509.09h1235v72.72H0z"/>
-                    <rect fill="#3c3b6e" width="494" height="363.63"/>
-                    <g fill="#fff">
-                        <g id="s18">
-                            <g id="s9">
-                                <g id="s5">
-                                    <g id="s4">
-                                        <path id="s" d="M49.4 24.3L59.2 38.8 75 35.5 66.6 50 75 64.5 59.2 61.2 49.4 75.7 39.7 61.2 24 64.5 32.4 50 24 35.5 39.7 38.8 49.4 24.3z"/>
-                                        <use href="#s" x="98.8"/>
-                                        <use href="#s" x="197.6"/>
-                                        <use href="#s" x="296.4"/>
-                                    </g>
-                                    <use href="#s" x="395.2"/>
-                                </g>
-                                <use href="#s4" y="74.8"/>
-                            </g>
-                            <use href="#s9" y="149.6"/>
-                        </g>
-                        <use href="#s18" y="299.2"/>
-                    </g>
-                </svg>
-            </div>
-        </div>
-        
-    
-        
-        
-        
-        
+        <!-- boton de la flacha de la derecha -->
+        <button id="scrollToTop" class="scroll-to-top" title="Desliza Arriba">
+            ↑
+        </button>
+
+
+
+
+        <!-- logo principal del portafolio -->
         <div class="logo">
             <a href="./index.html">
                 <img src="./imagenes/foto.png" alt="Logo Store" class="falling-text">
@@ -116,304 +72,360 @@
         </div>
 
 
-
-
         <!-- Botón Hamburguesa para Móviles -->
-        <button class="menu-toggle falling-text" aria-label="Abrir menú" title="Menú Desplegable">
-            <i class="fas fa-bars"></i> <!-- Icono de hamburguesa -->
+        <button class="menu-toggle falling-text" aria-label="Abrir menú" title="Menú Desplegable" id="menu-toggle">
+            <i class="fas fa-bars hamburger-icon"></i> <!-- Icono de hamburguesa -->
         </button>
-        
+
+
+
+
         <!-- Menú de navegación -->
         <nav class="nav-menu">
             <ul>
-                <li><a href="#inicio" class="nav-link falling-text" data-target="#inicio" data-key="navInicio">Inicio</a></li>
-                <li><a href="#acercademi" class="nav-link falling-text" data-target="#acercademi" data-key="navAcerca">Acerca De
+                <li><a href="#inicio" class="nav-link falling-text" data-target="#inicio"
+                        data-key="navInicio">Inicio</a></li>
+                <li><a href="#acercademi" class="nav-link falling-text" data-target="#acercademi"
+                        data-key="navAcerca">Acerca De
                         Mí</a></li>
                 <li><a href="#habilidades" class="nav-link falling-text" data-target="#habilidades"
                         data-key="navHabilidades">Habilidades</a></li>
                 <li><a href="#contacto" class="nav-link falling-text" data-target="#contacto"
-                        data-key="navContacto">Contacto</a></li>
+                        data-key="navContacto">Contactos</a></li>
             </ul>
-            <!-- Botón LinkedIn -->
+
+            <!-- Botón LinkedIn de disponibilidad de trabajo -->
             <a href="https://www.linkedin.com/" class="availability-link" target="_blank" rel="noopener noreferrer">
                 <div class="availability-bubble falling-text">
                     <div class="circle"></div>
                     <span class="falling-text" data-key="availableForWork">Disponible para trabajar</span>
                 </div>
             </a>
+
         </nav>
-    
-        <!-- Contenedor de Botones -->
-        <div class="header-buttons">
-            <!-- Botón de Modo Oscuro/Claro (Arriba) -->
-            <button id="theme-toggle" class="falling-text" title="Modo Claro/Oscuro">
-                <i id="luna-icon" class="fas fa-moon"></i>
-                <i id="sol-icon" class="fas fa-sun"></i>
-            </button>
+
+
+        <!-- ICONOS DE IDIOMAS ESPANOL Y ENGLISH -->
+        <div id="language-switcher">
+            <!-- Bandera de Perú -->
+            <div id="btn-es" class="falling-text circle-icon" title="Español">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 480">
+                    <g fill-rule="evenodd">
+                        <path fill="#d91023" d="M0 0h213.33v480H0z" />
+                        <path fill="#fff" d="M213.33 0h213.33v480H213.33z" />
+                        <path fill="#d91023" d="M426.67 0H640v480H426.67z" />
+                    </g>
+                </svg>
+            </div>
+            <!-- Bandera de Estados Unidos -->
+            <div id="btn-en" class="falling-text circle-icon" title="English">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1235 650">
+                    <rect fill="#b22234" width="1235" height="650" />
+                    <path fill="#fff"
+                        d="M0 72.72h1235v72.72H0zM0 218.18h1235v72.72H0zM0 363.63h1235v72.72H0zM0 509.09h1235v72.72H0z" />
+                    <rect fill="#3c3b6e" width="494" height="363.63" />
+                    <g fill="#fff">
+                        <g id="s18">
+                            <g id="s9">
+                                <g id="s5">
+                                    <g id="s4">
+                                        <path id="s"
+                                            d="M49.4 24.3L59.2 38.8 75 35.5 66.6 50 75 64.5 59.2 61.2 49.4 75.7 39.7 61.2 24 64.5 32.4 50 24 35.5 39.7 38.8 49.4 24.3z" />
+                                        <use href="#s" x="98.8" />
+                                        <use href="#s" x="197.6" />
+                                        <use href="#s" x="296.4" />
+                                    </g>
+                                    <use href="#s" x="395.2" />
+                                </g>
+                                <use href="#s4" y="74.8" />
+                            </g>
+                            <use href="#s9" y="149.6" />
+                        </g>
+                        <use href="#s18" y="299.2" />
+                    </g>
+                </svg>
+            </div>
         </div>
+
+
+        <!-- INICIO DE LOS Contenedor de Botones MODO OSCURO/CLARO -->
+        <button id="theme-toggle" class="falling-text" title="Modo Claro/Oscuro">
+            <i id="luna-icon" class="fas fa-sun"></i>
+            <i id="sol-icon" class="fas fa-moon"></i>
+        </button>
+
+
     </header>
 
 
-    
-    <!-- Inicio -->
-    <section id="inicio">
-        <h1 class="falling-text" data-key="welcomeMessage">¡Hola! Soy Cayo Jean👋</h1>
-        <p class="falling-text" data-key="developerDescription">Desarrollador Web apasionado por la tecnología, Amante de la creatividad y la innovación, Explorando siempre nuevos desafíos.</p>
-        <p class="falling-text" data-key="navigationHint">Utiliza los botones de arriba 👆 para navegar por el sitio o desliza hacia abajo👇.</p>
-    
-        <div class="container">
-            <div class="redes">
-                <!-- <a class="youtube falling-text" target="_blank" href="https://www.youtube.com" aria-label="YouTube">
-                    <i class="fab fa-youtube"></i>
-                </a>
-                <a class="twitter falling-text" target="_blank" href="https://twitter.com" aria-label="Twitter">
-                    <i class="fa fa-times" aria-hidden="true"></i>
-                </a>
-                <a class="facebook falling-text" target="_blank" href="https://web.facebook.com" aria-label="Facebook">
-                    <i class="fab fa-facebook"></i>
-                </a>
-                <a class="instagram falling-text" target="_blank" href="https://www.instagram.com" aria-label="Instagram">
-                    <i class="fab fa-instagram"></i>
-                </a>
-                <a class="discord falling-text" target="_blank" href="https://discord.com" aria-label="Discord">
-                    <i class="fab fa-discord"></i>
-                </a>
-                <a class="whatsapp falling-text" target="_blank" href="https://www.whatsapp.com" aria-label="WhatsApp">
-                    <i class="fab fa-whatsapp"></i>
-                </a> -->
-                <a class="gmail-link falling-text" target="_blank" href="mailto:cayojean.fs_97@hotmail.com" aria-label="Gmail" title="Enviar un correo">
-                    <i class="fas fa-envelope"></i>
-                </a>
-    
-                <a class="linkedin falling-text" target="_blank" href="https://www.linkedin.com/in/cayo-jean-f-129627301/" aria-label="LinkedIn" title="LinkedIn">
-                    <i class="fab fa-linkedin-in"></i>
-                </a>
-                <a class="github falling-text" target="_blank" href="https://github.com/CayoJean" aria-label="GitHub" title="GitHub">
-                    <i class="fab fa-github"></i>
-                </a>
+
+
+
+
+
+    <!-- Inicio de main -->
+    <main>
+        <!-- Inicio -->
+        <section id="inicio">
+            <h1 class="falling-text" data-key="welcomeMessage">¡Hola! Soy Cayo Jean <span class="hand-icon">👋</span></h1>
+            </h1>
+            <h3 class="falling-text" data-key="developerDescription">Desarrollador Web apasionado por la tecnología,
+                Amante de la creatividad y la innovación, Explorando siempre nuevos desafíos.
+            </h3>
+            <p class="falling-text" data-key="navigationHint">Utiliza los botones de arriba 👆 para navegar por el sitio
+                o desliza hacia abajo👇.
+            </p>
+
+            <div class="container">
+                <div class="redes">
+                    <a class="gmail-link falling-text" target="_blank" href="mailto:cayojean.fs_97@hotmail.com"
+                        aria-label="Gmail" title="Enviar un correo">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+
+                    <a class="linkedin falling-text" target="_blank"
+                        href="https://www.linkedin.com/in/cayo-jean-f-129627301/" aria-label="LinkedIn"
+                        title="LinkedIn">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a class="github falling-text" target="_blank" href="https://github.com/CayoJean"
+                        aria-label="GitHub" title="GitHub">
+                        <i class="fab fa-github"></i>
+                    </a>
+                </div>
             </div>
-        </div>        
 
+            <button class="btn btn-primary cv-button falling-text" onclick="openModal()" data-key="downloadCV" title="Clic Para Descargar">Descargar CV</button>
 
-        <button class="btn btn-primary cv-button falling-text" onclick="openModal()" data-key="downloadCV">Descargar CV</button>
-        
-        <!-- Modal para mostrar el PDF -->
-        <div id="modal-pdf" class="modal-overlay" style="display: none;">
-            <div class="modal-content">
-                <iframe id="cv-frame" src="" style="width: 100%; height: 500px; border: none;"></iframe>
-                <button class="btn btn-secondary close-btn" onclick="closeModal()">X</button>
+            <!-- Modal para mostrar el PDF -->
+            <div id="modal-pdf" class="modal-overlay" style="display: none;">
+                <div class="modal-content">
+                    <iframe id="cv-frame" src=""></iframe>
+                    <button class="btn btn-secondary close-btn" onclick="closeModal()">X</button>
+                </div>
             </div>
-        </div>
-        
-        
-    
-        <!-- Botón de Desplácese hacia abajo -->
-        <a href="#acercademi" class="scroll-down-btn falling-text" title="Ir a Acerca De Mí" data-key="scrollDownHint">
-            <i class="fas fa-chevron-down"></i> Desplácese hacia abajo
-        </a>
-    </section>
 
-    
+            <!-- Botón de Desplácese hacia abajo -->
+            <a href="#acercademi" class="scroll-down-btn falling-text" title="Ir a Acerca De Mí">
+                <i class="fas fa-chevron-down"></i> Desplácese hacia abajo
+            </a>
+        </section>
 
 
+        <!-- Acerca de Mí -->
+        <section id="acercademi" class="falling-text">
+            <h2 class="falling-text" data-key="aboutMeTitle">Acerca De Mí</h2>
+            <p class="falling-text" data-key="aboutMeDescription">
+                Soy un Programador Full Stack Developer Junior, con conocimientos prácticos en Front-End (HTML, CSS y JAVASCRIPT) y Back-End (Java, 
+                Spring Boot y Spring Security) y con capacidad de entender nuevas tecnologías rápidamente y la facultad de trabajar 
+                en un entorno de equipo. Mi viaje en el mundo de la 
+                tecnología comenzó con una fascinación por crear 
+                soluciones que no solo funcionan de manera eficiente, 
+                sino que también brindan una experiencia de usuario 
+                convincente. A medida que continúa mi viaje en el 
+                desarrollo Full Stack, siempre estoy buscando proyectos 
+                y oportunidades colaborativas en los que pueda contribuir
+                con mis habilidades y crecer tanto personal como 
+                profesionalmente. ¡Conectémonos y exploremos cómo podemos 
+                crear algo increíble juntos!.
+
+
+            </p>
+        </section>
 
 
 
-    <!-- Acerca de Mi -->
-    <section id="acercademi" class="falling-text">
-        <h2 class="falling-text" data-key="aboutMeTitle">Acerca De Mí</h2>
-        <p class="falling-text" data-key="aboutMeDescription">
-            Soy un Programador Full Stack Developer Junior, con conocimientos prácticos en Front-End, Back-End y con capacidad de
-            entender nuevas tecnologías rápidamente y la facultad de trabajar en un entorno de equipo.
-            Mi viaje en el mundo de la tecnología comenzó con una fascinación por crear soluciones que no solo
-            funcionan de manera eficiente, sino que también brindan una experiencia de usuario convincente. A medida que continúa mi viaje en el desarrollo Full Stack, siempre estoy buscando proyectos y
-            oportunidades colaborativas en los que pueda contribuir con mis habilidades y crecer tanto personal
-            como profesionalmente. ¡Conectémonos y exploremos cómo podemos crear algo increíble juntos!.
-        </p>
-    </section>
 
-    
-    <!-- Habilidades técnicas-->
-    <section id="habilidades" class="falling-text">
-        <h2 class="falling-text" data-key="technicalSkillsTitle">Habilidades Técnicas</h2>
-        <div class="habilidades-container falling-text">
-            <div class="habilidades">
-                <img src="/imagenes/html.webp" alt="Habilidades 1">
-                <h3 class="falling-text">HTML</h3>
-                <!-- <p class="falling-text">Descripción breve del habilidades.</p> -->
+        <!-- Habilidades Técnicas -->
+        <section id="habilidades" class="falling-text">
+            <h1 class="main-title falling-text" data-key="technicalSkillsTitle">Habilidades Técnicas</h1><br>
+
+            <!-- Front-End Section -->
+            <div class="habilidades-section">
+                <h4 class="falling-text">Front-End</h4> <br>
+                <div class="habilidades-container">
+                    <div class="habilidades">
+                        <img src="/imagenes/html.webp" alt="HTML">
+                        <h3 class="falling-text">HTML</h3>
+                    </div>
+                    <div class="habilidades">
+                        <img src="/imagenes/css.webp" alt="CSS">
+                        <h3 class="falling-text">CSS</h3>
+                    </div>
+                    <div class="habilidades">
+                        <img src="/imagenes/javascript.webp" alt="JavaScript">
+                        <h3 class="falling-text">JAVA SCRIPT</h3>
+                    </div>
+                    <div class="habilidades">
+                        <img src="/imagenes/react.webp" alt="React">
+                        <h3 class="falling-text">REACT</h3>
+                    </div>
+                    <div class="habilidades">
+                        <img src="/imagenes/tailwidcss.png" alt="TailwindCSS">
+                        <h3 class="falling-text">TAILWIDCSS</h3>
+                    </div>
+                </div>
             </div>
-            <div class="habilidades">
-                <img src="/imagenes/css.webp" alt="Habilidades 2">
-                <h3 class="falling-text">CSS</h3>
-                <!-- <p class="falling-text">Descripción breve del habilidades.</p> -->
+
+            <!-- Back-End Section -->
+            <div class="habilidades-section"> <br>
+                <h4 class="falling-text">Back-End</h4> <br>
+                <div class="habilidades-container">
+                    <div class="habilidades">
+                        <img src="/imagenes/java.webp" alt="Java">
+                        <h3 class="falling-text">JAVA</h3>
+                    </div>
+                    <div class="habilidades">
+                        <img src="/imagenes/mysql.png" alt="MySQL">
+                        <h3 class="falling-text">MYSQL</h3>
+                    </div>
+                    <div class="habilidades">
+                        <img src="/imagenes/spring.png" alt="Spring">
+                        <h3 class="falling-text">SPRING</h3>
+                    </div>
+                </div>
             </div>
-            <div class="habilidades">
-                <img src="/imagenes/java.webp" alt="Habilidades 3">
-                <h3 class="falling-text">JAVA</h3>
-                <!-- <p class="falling-text">Descripción breve del habilidades.</p> -->
+
+            <!-- Herramientas Section -->
+            <div class="habilidades-section"> <br>
+                <h4 class="falling-text " data-key="toolsTitle">Herramientas</h4><br>
+                <div class="habilidades-container">
+                    <div class="habilidades">
+                        <img src="/imagenes/git.png" alt="Git">
+                        <h3 class="falling-text">GIT</h3>
+                    </div>
+                    <div class="habilidades">
+                        <img src="/imagenes/github.png" alt="GitHub">
+                        <h3 class="falling-text">GitHub</h3>
+                    </div>
+                    <div class="habilidades">
+                        <img src="/imagenes/postman.png" alt="Postman">
+                        <h3 class="falling-text">Postman</h3>
+                    </div>
+                    <div class="habilidades">
+                        <img src="/imagenes/visualstudiocode.png" alt="Visual Studio Code">
+                        <h3 class="falling-text">Visual Studio Code</h3>
+                    </div>
+                    <div class="habilidades">
+                        <img src="/imagenes/intelliJiDEA.png" alt="IntelliJ IDEA">
+                        <h3 class="falling-text">IntelliJ IDEA</h3>
+                    </div>
+                </div>
             </div>
-            <div class="habilidades">
-                <img src="/imagenes/mysql.png" alt="Habilidades 4">
-                <h3 class="falling-text">MYSQL</h3>
-                <!-- <p class="falling-text">Descripción breve del habilidades.</p> -->
+
+
+
+            <div class="habilidades-section"> <br>
+                <h4 class="falling-text" data-key="softSkillsTitle">Habilidades Blandas</h4><br>
+                <div class="habilidades-container">
+                    <div class="habilidades">
+                        <img src="/imagenes/adaptabilidad.webp" alt="Habilidades 1">
+                        <h3 class="falling-text" data-key="adaptabilityTitle">Adaptabilidad</h3>
+                    </div>
+                    <div class="habilidades">
+                        <img src="/imagenes/dedicado.webp" alt="Habilidades 1">
+                        <h3 class="falling-text" data-key="dedicatedTitle">Dedicado</h3>
+                    </div>
+                    <div class="habilidades">
+                        <img src="/imagenes/eticaprofesional.jpg" alt="Habilidades 1">
+                        <h3 class="falling-text" data-key="professionalEthicsTitle">Ética Profesional</h3>
+                    </div>
+                    <div class="habilidades">
+                        <img src="/imagenes/trabajoenequipo.jpg" alt="Habilidades 1">
+                        <h3 class="falling-text" data-key="teamworkTitle">Trabajo en Equipo</h3>
+                    </div>
+                </div>
             </div>
-            <div class="habilidades">
-                <img src="/imagenes/react.webp" alt="Habilidades 5">
-                <h3 class="falling-text">REACT</h3>
-                <!-- <p class="falling-text">Descripción breve del habilidades.</p> -->
-            </div>
-            <div class="habilidades">
-                <img src="/imagenes/c++.png" alt="Habilidades 6">
-                <h3 class="falling-text">C++</h3>
-                <!-- <p class="falling-text">Descripción breve del habilidades.</p> -->
-            </div>
-            <div class="habilidades">
-                <img src="/imagenes/git.png" alt="Habilidades 7">
-                <h3 class="falling-text">GIT</h3>
-                <!-- <p class="falling-text">Descripción breve del habilidades.</p> -->
-            </div>
-            <div class="habilidades">
-                <img src="/imagenes/javascript.webp" alt="Habilidades 8">
-                <h3 class="falling-text">JAVA SCRIPT</h3>
-                <!-- <p class="falling-text">Descripción breve del habilidades.</p> -->
-            </div>
-            <div class="habilidades">
-                <img src="/imagenes/nodejs.webp" alt="Habilidades 9">
-                <h3 class="falling-text">NODE JS</h3>
-                <!-- <p class="falling-text">Descripción breve del habilidades.</p> -->
-            </div>
-            <div class="habilidades">
-                <img src="/imagenes/python.png" alt="Habilidades 10">
-                <h3 class="falling-text">PYTHON</h3>
-                <!-- <p class="falling-text">Descripción breve del habilidades.</p> -->
-            </div>
-            <div class="habilidades">
-                <img src="/imagenes/tailwidcss.png" alt="Habilidades 11">
-                <h3 class="falling-text">TAILWIDCSS</h3>
-                <!-- <p class="falling-text">Descripción breve del habilidades.</p> -->
-            </div>
-        </div>
-
-        <h1 class="falling-text" data-key="softSkillsTitle">Habilidades Blandas</h1>
-
-        <div class="habilidades-container">
-            <div class="habilidades">
-                <img src="/imagenes/adaptabilidad.webp" alt="Habilidades 1">
-                <h3 class="falling-text">Adaptabilidad     </h3>
-            </div>
-            <div class="habilidades">
-                <img src="/imagenes/dedicado.webp" alt="Habilidades 1">
-                <h3 class="falling-text">Dedicado</h3>
-            </div>
-            <div class="habilidades">
-                <img src="/imagenes/eticaprofesional.jpg" alt="Habilidades 1">
-                <h3 class="falling-text">Ética Profesional</h3>
-            </div>
-            <div class="habilidades">
-                <img src="/imagenes/trabajoenequipo.jpg" alt="Habilidades 1">
-                <h3 class="falling-text">Trabajo en Equipo</h3>
-            </div>
-        </div>
-
-    </section>
+        </section>
 
 
 
+        <!-- Contacto -->
+        <section id="contacto" class="falling-text">
+            <h2 class="falling-text" data-key="contactTitle">Contacto</h2>
+            <!-- Redes Sociales -->
+            <ul class="redesocial falling-text">
+                <li class="icon facebook">
+                    <a href="https://web.facebook.com/cayoyangfs.31" target="_blank">
+                        <span class="tooltip">Facebook</span>
+                        <span><i class="fab fa-facebook-f"></i></span>
+                    </a>
+                </li>
+                <li class="icon twitter falling-text">
+                    <a href="https://x.com/CayoJeanFs" target="_blank">
+                        <span class="tooltip">X</span>
+                        <span><i class="fas fa-times"></i></span>
+                    </a>
+                </li>
+                <li class="icon instagram falling-text">
+                    <a href="https://www.instagram.com/cayo__yang/?hl=es-la" target="_blank">
+                        <span class="tooltip">Instagram</span>
+                        <span><i class="fab fa-instagram"></i></span>
+                    </a>
+                </li>
+                <li class="icon github falling-text">
+                    <a href="https://github.com/CayoJean" target="_blank">
+                        <span class="tooltip">GitHub</span>
+                        <span><i class="fab fa-github"></i></span>
+                    </a>
+                </li>
+                <li class="icon youtube falling-text">
+                    <a href="https://www.youtube.com/@cayokenfs" target="_blank">
+                        <span class="tooltip">YouTube</span>
+                        <span><i class="fab fa-youtube"></i></span>
+                    </a>
+                </li>
+                <li class="icon discord falling-text">
+                    <a href="https://discordapp.com/users/1210759417046368328" target="_blank">
+                        <span class="tooltip">Discord</span>
+                        <span><i class="fab fa-discord"></i></span>
+                    </a>
+                </li>
+                <li class="icon whatsApp falling-text">
+                    <a href="https://www.whatsapp.com/" target="_blank">
+                        <span class="tooltip">WhatsApp</span>
+                        <span><i class="fab fa-whatsapp"></i></span>
+                    </a>
+                </li>
+                <li class="icon linkedin falling-text">
+                    <a href="https://www.linkedin.com/in/cayo-jean-f-129627301/" target="_blank">
+                        <span class="tooltip">LinkedIn</span>
+                        <span><i class="fab fa-linkedin-in"></i></span>
+                    </a>
+                </li>
+            </ul>
+        </section>
+
+    </main>
 
 
-    
-    <!-- Contacto -->
-    <section id="contacto" class="falling-text">
-        <h2 class="falling-text" data-key="contactTitle">Contacto</h2>
-        <!-- Redes Sociales -->
-        <ul class="redesocial falling-text">
-            <li class="icon facebook">
-                <a href="https://web.facebook.com/cayoyangfs.31" target="_blank">
-                    <span class="tooltip">Facebook</span>
-                    <span><i class="fab fa-facebook-f"></i></span>
-                </a>
-            </li>
-            <li class="icon twitter falling-text">
-                <a href="https://x.com/CayoJeanFs" target="_blank">
-                    <span class="tooltip">X</span>
-                    <span><i class="fas fa-times"></i></span>
-                </a>
-            </li>
-            <li class="icon instagram falling-text">
-                <a href="https://www.instagram.com/cayo__yang/?hl=es-la" target="_blank">
-                    <span class="tooltip">Instagram</span>
-                    <span><i class="fab fa-instagram"></i></span>
-                </a>
-            </li>
-            <li class="icon github falling-text">
-                <a href="https://github.com/CayoJean" target="_blank">
-                    <span class="tooltip">GitHub</span>
-                    <span><i class="fab fa-github"></i></span>
-                </a>
-            </li>
-            <li class="icon youtube falling-text">
-                <a href="https://www.youtube.com/@cayokenfs" target="_blank">
-                    <span class="tooltip">YouTube</span>
-                    <span><i class="fab fa-youtube"></i></span>
-                </a>
-            </li>
-            <li class="icon discord falling-text">
-                <a href="https://discordapp.com/users/1210759417046368328" target="_blank">
-                    <span class="tooltip">Discord</span>
-                    <span><i class="fab fa-discord"></i></span>
-                </a>
-            </li>
-            <li class="icon whatsApp falling-text">
-                <a href="https://www.whatsapp.com/" target="_blank">
-                    <span class="tooltip">WhatsApp</span>
-                    <span><i class="fab fa-whatsapp"></i></span>
-                </a>
-            </li>
-            <li class="icon linkedin falling-text">
-                <a href="https://www.linkedin.com/in/cayo-jean-f-129627301/" target="_blank">
-                    <span class="tooltip">LinkedIn</span>
-                    <span><i class="fab fa-linkedin-in"></i></span>
-                </a>
-            </li>
-        </ul>
-    </section>
-
-
-
-
-
-
-
-
-
-
-    <!-- Footer -->
     <footer>
+
         <div class="container">
             <!-- <p>&copy; 2024 Portafolio &copy;</p> -->
             <p><b>&copy; Autor: Cayo Jean &copy;</b></p>
-            <p data-key="footerRights">Todos los Derechos Reservados</p>
+            <p data-key="footerRights">2025</p>
         </div>
+
     </footer>
+    
 
 
 
 
-    <script src="/JavaScript/particles.js"></script>
-    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <script src="JavaScript/iconomenumovil.js"></script>
+    <script src="JavaScript/UsuarioCambiaPestaña.js"></script>
+    <script src="JavaScript/iconotraductorei.js"></script>
+    <script src="JavaScript/dezlisadecolor.js"></script>
+    <script src="JavaScript/botonflecha.js"></script>
+    <script src="JavaScript/cvpestaña.js"></script>
+    <script src="JavaScript/efectomovimientogeneral.js"></script>
+    
+    <!-- <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script> -->
+    <script src="JavaScript/modosclaroyoscuro.js"></script>
+    <script src="JavaScript/loadercarga.js"></script>
 
-    <script src="/JavaScript/modoclaroyoscuro.js"></script>
-    <script src="/JavaScript/dezlisaycolor.js"></script>
-    <script src="/JavaScript/UsuarioCambiaPestaña.js"></script>
-    <script src="/JavaScript/efectomovimientogeneral.js"></script>
-    <script src="/JavaScript/botonflecha.js"></script>
-    <script src="/JavaScript/iconomenumovil.js"></script>
-    <script src="/JavaScript/iconotraductorei.js"></script>
-    <script src="/JavaScript/cvpestaña.js"></script>
-    <script src="/JavaScript/loadercarga.js"></script>
-    <script src="/JavaScript/prueba.js"></script>
-
-    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
 
 </body>
+
 </html>
