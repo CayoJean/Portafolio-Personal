@@ -25,7 +25,7 @@ function changeLanguage(language) {
             if (key === 'navInicio') link.innerText = 'Inicio';
             if (key === 'navAcerca') link.innerText = 'Acerca de mí';
             if (key === 'navHabilidades') link.innerText = 'Habilidades';
-            if (key === 'navContacto') link.innerText = 'Contacto';
+            if (key === 'navContactos') link.innerText = 'Contactos';
         });
 
         // Traducir el texto de la disponibilidad para trabajar
@@ -126,9 +126,9 @@ function changeLanguage(language) {
 
 
         // Traducir "Contacto"
-        const contactTitle = document.querySelector('[data-key="contactTitle"]');
-        if (contactTitle) {
-            contactTitle.innerText = 'Contacto';
+        const contactsTitle = document.querySelector('[data-key="contactsTitle"]');
+        if (contactsTitle) {
+            contactsTitle.innerText = 'Contactos';
         }
 
         // Traducir Footer
@@ -137,10 +137,12 @@ function changeLanguage(language) {
             footerCopyright.innerHTML = '<b>&copy; Autor: Cayo Jean &copy;</b>';
         }
 
-        const footerRights = document.querySelector('[data-key="footerRights"]');
+        const footerRights = document.querySelector('[data-key="footerRights"]'); 
         if (footerRights) {
-            footerRights.innerText = 'Todos los Derechos Reservados';
+            footerRights.innerHTML = `&copy; 🤍Todos los Derechos Reservados 2025🇵🇪 &copy;`;
+            //footerRights.innerText = `© Todos los Derechos Reservados 2025 ©`;// 
         }
+
 
         // Traducir Descargar CV. a español
         const downloadCVButton = document.querySelector('[data-key="downloadCV"]');
@@ -165,7 +167,7 @@ function changeLanguage(language) {
             if (key === 'navInicio') link.innerText = 'Home';
             if (key === 'navAcerca') link.innerText = 'About Me';
             if (key === 'navHabilidades') link.innerText = 'Skills';
-            if (key === 'navContacto') link.innerText = 'Contact';
+            if (key === 'navContactos') link.innerText = 'Contacts';
         });
 
         // Traducir el texto de la disponibilidad para trabajar
@@ -264,10 +266,10 @@ function changeLanguage(language) {
 
 
 
-        // Traducir "Contacto"
-        const contactTitle = document.querySelector('[data-key="contactTitle"]');
-        if (contactTitle) {
-            contactTitle.innerText = 'Contact';
+        // Traducir "Contactos"
+        const contactsTitle = document.querySelector('[data-key="contactsTitle"]');
+        if (contactsTitle) {
+            contactsTitle.innerText = 'Contacts';
         }
 
         // Traducir Footer

@@ -14,7 +14,7 @@
 
 
 
-#contacto {
+#contactos {
     display: flex;
     flex-direction: column; /* Coloca los elementos en una columna */
     justify-content: center; /* Centra verticalmente */
@@ -24,7 +24,6 @@
     font-size: 27px;
     padding: 40px; /* Espaciado interno opcional */
     box-sizing: border-box; /* Asegura que el padding no desborde */
-    color: #25d366;
     margin: 10px;
 }
 
