@@ -5,16 +5,13 @@
     justify-content: center; /* Centra horizontalmente */
     align-items: center; /* Centra verticalmente */
     flex-wrap: wrap; /* Permite que los íconos salten de línea si no caben */
-    padding: 5px;
-    margin: -30px;
-    width: 50%;
 }
 
 
 
 
 
-#contactos {
+#contacto {
     display: flex;
     flex-direction: column; /* Coloca los elementos en una columna */
     justify-content: center; /* Centra verticalmente */
@@ -398,10 +395,24 @@
 
 
     /* Estilos generales */
-.redesocial {
+    .redesocial {
     
-    padding: 5px;
-    margin: -30px;
+        padding: 25px;
+        margin: -10px;
     
-}
+    }
+
+
+    #contacto {
+        display: flex;
+        flex-direction: column; /* Coloca los elementos en una columna */
+        justify-content: center; /* Centra verticalmente */
+        align-items: center; /* Centra horizontalmente */
+        height: 100vh; /* La sección ocupa toda la altura de la ventana */
+        text-align: center; /* Centra el texto */
+        font-size: 20px;
+        padding: 40px; /* Espaciado interno opcional */
+        box-sizing: border-box; /* Asegura que el padding no desborde */
+        margin: 30px;
+    }
 }

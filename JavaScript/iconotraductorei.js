@@ -22,10 +22,10 @@ function changeLanguage(language) {
         // Cambiar a español (ejemplo)
         document.querySelectorAll('.nav-link').forEach(function(link) {
             const key = link.getAttribute('data-key');
-            if (key === 'navInicio') link.innerText = 'Inicio';
-            if (key === 'navAcerca') link.innerText = 'Acerca de mí';
-            if (key === 'navHabilidades') link.innerText = 'Habilidades';
-            if (key === 'navContactos') link.innerText = 'Contactos';
+            if (key === 'navInicio') link.innerText = '< Inicio />';
+            if (key === 'navAcerca') link.innerText = '< Acerca de mí />';
+            if (key === 'navHabilidades') link.innerText = '< Habilidades />';
+            if (key === 'navContacto') link.innerText = '< Contactos />';
         });
 
         // Traducir el texto de la disponibilidad para trabajar
@@ -58,14 +58,14 @@ function changeLanguage(language) {
         // Traducir "Acerca de mí"
         const aboutMeTitle = document.querySelector('[data-key="aboutMeTitle"]');
         if (aboutMeTitle) {
-            aboutMeTitle.innerText = 'Acerca De Mí';
+            aboutMeTitle.innerText = '< Acerca De Mí />';
         }
 
         const aboutMeDescription = document.querySelector('[data-key="aboutMeDescription"]');
         if (aboutMeDescription) {
             aboutMeDescription.innerText =
-            "Soy un Programador Full Stack Developer Junior, con conocimientos prácticos en Front-End (HTML, CSS y JAVASCRIPT) " +
-            "y Back-End (Java, Spring Boot y Spring Security) y con capacidad de entender nuevas tecnologías rápidamente " +
+            "Soy un Programador Full Stack Developer Junior, con conocimientos prácticos en Front-End (HTML, CSS y JAVASCRIPT)" +
+            ", Back-End (JAVA, SPRING BOOT y SPRING SECURITY) y con capacidad de entender nuevas tecnologías rápidamente " +
             "y la facultad de trabajar en un entorno de equipo. Mi viaje en el mundo de la tecnología comenzó con una fascinación " +
             "por crear soluciones que no solo funcionan de manera eficiente, sino que también brindan una experiencia de usuario convincente. " +
             "A medida que continúa mi viaje en el desarrollo Full Stack, siempre estoy buscando proyectos y oportunidades colaborativas " +
@@ -76,7 +76,7 @@ function changeLanguage(language) {
         // Traducir "Habilidades"
         const technicalSkillsTitle = document.querySelector('[data-key="technicalSkillsTitle"]');
         if (technicalSkillsTitle) {
-            technicalSkillsTitle.innerText = 'Habilidades Técnicas';
+            technicalSkillsTitle.innerText = '< Habilidades Técnicas />';
         }
 
 
@@ -128,7 +128,7 @@ function changeLanguage(language) {
         // Traducir "Contacto"
         const contactsTitle = document.querySelector('[data-key="contactsTitle"]');
         if (contactsTitle) {
-            contactsTitle.innerText = 'Contactos';
+            contactsTitle.innerText = '< Contactos />';
         }
 
         // Traducir Footer
@@ -167,7 +167,7 @@ function changeLanguage(language) {
             if (key === 'navInicio') link.innerText = 'Home';
             if (key === 'navAcerca') link.innerText = 'About Me';
             if (key === 'navHabilidades') link.innerText = 'Skills';
-            if (key === 'navContactos') link.innerText = 'Contacts';
+            if (key === 'navContacto') link.innerText = 'Contacts';
         });
 
         // Traducir el texto de la disponibilidad para trabajar
@@ -267,9 +267,9 @@ function changeLanguage(language) {
 
 
         // Traducir "Contactos"
-        const contactsTitle = document.querySelector('[data-key="contactsTitle"]');
-        if (contactsTitle) {
-            contactsTitle.innerText = 'Contacts';
+        const contactTitle = document.querySelector('[data-key="contactsTitle"]');
+        if (contactTitle) {
+            contactTitle.innerText = 'Contacts';
         }
 
         // Traducir Footer

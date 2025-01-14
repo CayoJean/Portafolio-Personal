@@ -39,7 +39,8 @@
 </head>
 
 <body>
-    
+    <!-- Contenedor de partículas -->
+<div id="particles-js"></div>
 
 
     <!-- Loader (Pantalla de carga) -->
@@ -47,10 +48,6 @@
     <div class="loader-container" id="loader">
         <div class="circle-loader"></div>
     </div>
-    
-
-
-
 
 
     <header>
@@ -65,11 +62,13 @@
 
         <!-- logo principal del portafolio -->
         <div class="logo">
-            <a href="./index.html">
+            <a href="./index.html" class= "falling-text" id="profile">
                 <img src="./imagenes/foto.png" alt="Logo Store" class="falling-text">
+                <span class="status-dot"></span>
             </a>
             <h1 class="falling-text">Portafolio.👨‍💻</h1>
         </div>
+        
 
 
         <!-- Botón Hamburguesa para Móviles -->
@@ -90,8 +89,8 @@
                         Mí</a></li>
                 <li><a href="#habilidades" class="nav-link falling-text" data-target="#habilidades"
                         data-key="navHabilidades">Habilidades</a></li>
-                <li><a href="#contactos" class="nav-link falling-text" data-target="#contactos"
-                        data-key="navContactos">Contactos</a></li>
+                <li><a href="#contacto" class="nav-link falling-text" data-target="#contacto"
+                        data-key="navContacto">Contactos</a></li>
             </ul>
 
             <!-- Botón LinkedIn de disponibilidad de trabajo -->
@@ -216,8 +215,8 @@
         <section id="acercademi" class="falling-text">
             <h2 class="falling-text" data-key="aboutMeTitle">Acerca De Mí</h2>
             <p class="falling-text" data-key="aboutMeDescription">
-                Soy un Programador Full Stack Developer Junior, con conocimientos prácticos en Front-End (HTML, CSS y JAVASCRIPT) y Back-End (Java, 
-                Spring Boot y Spring Security) y con capacidad de entender nuevas tecnologías rápidamente y la facultad de trabajar 
+                Soy un Programador Full Stack Developer Junior, con conocimientos prácticos en Front-End (HTML, CSS y JAVASCRIPT), Back-End (JAVA, SPRING BOOT y SPRING SECURITY) 
+                y con capacidad de entender nuevas tecnologías rápidamente y la facultad de trabajar 
                 en un entorno de equipo. Mi viaje en el mundo de la 
                 tecnología comenzó con una fascinación por crear 
                 soluciones que no solo funcionan de manera eficiente, 
@@ -341,8 +340,8 @@
 
 
         <!-- Contacto -->
-        <section id="contactos" class="falling-text">
-            <h2 class="falling-text" data-key="contactTitle">Contactos</h2>
+        <section id="contacto" class="falling-text">
+            <h2 class="falling-text" data-key="contactsTitle">Contactos</h2>
             <!-- Redes Sociales -->
             <ul class="redesocial falling-text">
                 <li class="icon facebook">
@@ -425,6 +424,7 @@
     <script src="JavaScript/modosclaroyoscuro.js"></script>
     <script src="JavaScript/loadercarga.js"></script>
 
+    <script src="JavaScript/particules.js"></script>
 
 </body>
 

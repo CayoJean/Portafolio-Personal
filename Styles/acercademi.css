@@ -20,7 +20,7 @@
     font-size: 20px;              /* Tamaño del texto */
     line-height: 1.6;              /* Espaciado entre líneas */
     max-width: 800px;
-    font-weight: bold;              /* Limita el ancho del texto */
+    /* font-weight: bold; */              /* Limita el ancho del texto */
 }
 
 
@@ -45,6 +45,6 @@
             font-size: 16px;              /* Tamaño del texto */
             line-height: 1.6;              /* Espaciado entre líneas */
             
-            font-weight: bold;              /* Limita el ancho del texto */
+            /* font-weight: bold; */              /* Limita el ancho del texto */
         }
 }

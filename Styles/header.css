@@ -6,7 +6,8 @@ header {
     right: 0; /* Se alinea al borde derecho */
     z-index: 1000; /* Asegura que el header esté por encima de otros elementos */
     display: flex; /* Usa flexbox para organizar el contenido */
-    justify-content: center; /* Centra horizontalmente los elementos dentro del header */
+    flex-wrap: wrap; /* Permite que los íconos salten deILINE si no caben */
+    justify-content: space-between; /* Distribuye los elementos horizontalmente */
     align-items: center; /* Centra verticalmente los elementos dentro del header */
     gap: 20px; /* Agrega espacio entre los elementos internos del header */
     padding: 15px 30px; /* Agrega espacio interno al header */
@@ -53,8 +54,8 @@ body.dark-mode header a {
 .logo {
     display: flex;
     justify-content: flex-start; /* Alinea los elementos al inicio del contenedor */
-    align-items: center;    /* Centra el logo y el texto */
-    gap: -10px;               /* Espacio entre imagen y texto */
+    align-items: center; /* Centra el logo y el texto */
+    gap: 10px; /* Espacio entre imagen y texto */
 }
 
 .logo img {
@@ -63,6 +64,35 @@ body.dark-mode header a {
     border-radius: 50%; /* Imagen circular */
     margin-right: 10px; /* Espacio a la derecha de la imagen */
 }
+
+.profile {
+    position: relative; /* Contenedor relativo para posicionar el punto */
+}
+
+.status-dot {
+    position: absolute;
+    bottom: 5px; /* Alinea al borde inferior */
+    right: 12px; /* Ajusta ligeramente la posición horizontal */
+    width: 8px; /* Tamaño del punto */
+    height: 8px;
+    background-color: #4caf50; /* Verde para "conectado" */
+    border: 1px solid #fff; /* Borde blanco para contraste */
+    border-radius: 50%; /* Hace el punto circular */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 /*TEXTO PORTAFOLIO*/
@@ -115,7 +145,7 @@ body.dark-mode .logo h1 {
 }
 
 .nav-menu a:hover {
-    color: #1efe00; /* Color al pasar el mouse */
+    color: #fe3b00; /* Color al pasar el mouse del MENU*/
 }
 
 
@@ -126,8 +156,8 @@ body.dark-mode .logo h1 {
     width: 5px;
     height: 20px;
     background-color: #000000; /* Color negro por defecto */
-    margin-left: 30px;
-    margin-right: 0px;
+    margin-left: 8px;
+    margin-right: -12px;
     animation: fadeInOut 1.5s infinite; /* Efecto de parpadeo */
     transition: background-color 0.3s ease; /* Transición para el cambio de color */
 }
@@ -563,6 +593,21 @@ body.dark-mode #theme-toggle .fa-moon {
         left: 58px; /* Controla la distancia desde el borde izquierdo */
         transform: translateY(-50%);
         margin: 0;
+    }
+
+    .profile {
+        position: relative; /* Contenedor relativo para posicionar el punto */
+    }
+    
+    .status-dot {
+        position: absolute;
+        bottom: 5px; /* Alinea al borde inferior */
+        right: 120px; /* Ajusta ligeramente la posición horizontal */
+        width: 8px; /* Tamaño del punto */
+        height: 8px;
+        background-color: #4caf50; /* Verde para "conectado" */
+        border: 1px solid #fff; /* Borde blanco para contraste */
+        border-radius: 50%; /* Hace el punto circular */
     }
 }
 
