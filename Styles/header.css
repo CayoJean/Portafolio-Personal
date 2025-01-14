@@ -65,6 +65,8 @@ body.dark-mode header a {
     margin-right: 10px; /* Espacio a la derecha de la imagen */
 }
 
+
+/*ES PARA EL PUNTO AL COSTADODE LA FOTO*/
 .profile {
     position: relative; /* Contenedor relativo para posicionar el punto */
 }
@@ -98,10 +100,11 @@ body.dark-mode header a {
 /*TEXTO PORTAFOLIO*/
 /* Estilos para el título "Portafolio" */
 .logo h1 {
-    font-size: 30px;
+    font-size: 30px !important; /* Forzar el tamaño */
     font-weight: bold;
     margin: 0; /* Sin márgenes adicionales */
     transition: color 0.3s ease; /* Transición suave para el cambio de color */
+    margin-left: -15px;
 }
 
 /* Modo claro */
@@ -538,16 +541,28 @@ body.dark-mode #theme-toggle .fa-moon {
 /* RESPONSIVE - Solo mostrar separadores horizontales en pantallas móviles */
 @media screen and (max-width: 768px) {
     /* Separadores horizontales solo en móviles */
+    /* Separadores horizontales solo en móviles */
     .nav-menu li:not(:last-child)::after {
         content: "";
         display: block; /* La línea será un bloque */
-        width: 80%; /* Abarca todo el ancho disponible */
+        width: 80%; /* Ajusta el ancho de la línea */
         height: 2px; /* Grosor de la línea */
-        background-color: #000000; /* Color negro por defecto */
-        margin-top: 15px; /* Espacio encima de la línea */
-        margin-bottom: 15px; /* Espacio debajo de la línea */
+        background-color: #000000; /* Color del separador */
+        margin: 15px auto; /* Centra horizontalmente la línea y ajusta espacio arriba/abajo */
         animation: fadeInOut 1.5s infinite; /* Efecto de parpadeo */
         transition: background-color 0.3s ease; /* Transición para el cambio de color */
+    }
+
+    /* Asegúrate de que la lista esté centrada */
+    .nav-menu {
+        display: flex;
+        flex-direction: column; /* Ordena los elementos verticalmente */
+        align-items: center; /* Centra los elementos horizontalmente */
+    }
+
+    .nav-menu li {
+        text-align: center; /* Centra el contenido del ítem */
+        width: 100%; /* Asegura que cada ítem ocupe todo el ancho disponible */
     }
 
     /* Modo claro */
@@ -559,17 +574,18 @@ body.dark-mode #theme-toggle .fa-moon {
     body.dark-mode .nav-menu li:not(:last-child)::after {
         background-color: #ffffff; /* Color blanco en modo oscuro */
     }
-}
 
-/* Efecto de parpadeo para el separador */
-@keyframes fadeInOut {
-    0%, 100% {
+    /* Efecto de parpadeo para el separador */
+    @keyframes fadeInOut {
+        0%, 100% {
         opacity: 0.2;
-    }
-    50% {
+    }  
+        50% {
         opacity: 1;
     }
+    }
 }
+
 
 
 
@@ -583,16 +599,16 @@ body.dark-mode #theme-toggle .fa-moon {
         justify-content: flex-start; /* Alinea todo al inicio */
     }
     .logo img {
-        margin-left: -170px; /* Reduce la distancia al borde en móvil */
+        margin-left: -155px; /* Reduce la distancia al borde en móvil */
     }
 
     .logo h1 {
         position: absolute;
-        font-size: 10px;
         top: 30%; /* Ajusta para centrar verticalmente */
         left: 58px; /* Controla la distancia desde el borde izquierdo */
         transform: translateY(-50%);
         margin: 0;
+        font-size: 18px !important; /* Forzar el tamaño */
     }
 
     .profile {
@@ -602,7 +618,7 @@ body.dark-mode #theme-toggle .fa-moon {
     .status-dot {
         position: absolute;
         bottom: 5px; /* Alinea al borde inferior */
-        right: 120px; /* Ajusta ligeramente la posición horizontal */
+        right: 110px; /* Ajusta ligeramente la posición horizontal */
         width: 8px; /* Tamaño del punto */
         height: 8px;
         background-color: #4caf50; /* Verde para "conectado" */

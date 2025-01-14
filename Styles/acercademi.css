@@ -35,7 +35,7 @@
             font-size: 1.8rem;
             /* Tamaño grande para pantallas normales */
             margin-bottom: 10px;
-            margin-top: 180px;
+            margin-top: -50px; /*ES PARA SUBIR TODO LO QUE ES "ACERCA DE MI"*/
             line-height: 1.2;
             /* Espaciado entre líneas */
         }

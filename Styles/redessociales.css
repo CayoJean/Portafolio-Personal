@@ -383,36 +383,33 @@
 
 
 
+
+
+
+
+
 /* Ajuste para pantallas pequeñas (móviles) */
 @media screen and (max-width: 768px) {
     .redesocial {
-        width: 90%; /* Asegura que los íconos no ocupen más de un 100% del ancho */
+        display: grid;
+        grid-template-columns: repeat(3, 1fr); /* Tres columnas de igual tamaño */
+        gap: 10px; /* Espacio entre elementos */
+        justify-content: center; /* Centra horizontalmente el grid */
+        align-items: center; /* Centra verticalmente el contenido */
+        width: 100%; /* Asegura que el contenedor ocupe todo el ancho disponible */
+        margin: 0 auto; /* Centra el contenedor dentro de su padre */
+        margin-left: -40px;
     }
 
     .redesocial li {
-        width: 80%; /* Cada ícono ocupa la mitad del ancho */
+        text-align: center; /* Centra el contenido dentro de cada elemento */
     }
 
-
-    /* Estilos generales */
-    .redesocial {
-    
-        padding: 25px;
-        margin: -10px;
-    
-    }
-
-
-    #contacto {
-        display: flex;
-        flex-direction: column; /* Coloca los elementos en una columna */
-        justify-content: center; /* Centra verticalmente */
-        align-items: center; /* Centra horizontalmente */
-        height: 100vh; /* La sección ocupa toda la altura de la ventana */
-        text-align: center; /* Centra el texto */
-        font-size: 20px;
-        padding: 40px; /* Espaciado interno opcional */
-        box-sizing: border-box; /* Asegura que el padding no desborde */
-        margin: 30px;
+    #contacto h2 {
+        font-size: 1.9rem; /* Tamaño para pantallas pequeñas */
+        margin-bottom: 50px;
+        margin-top: -50px;
+        line-height: 1.2; /* Espaciado entre líneas */
+        text-align: center; /* Centra el título */
     }
 }
