@@ -139,7 +139,7 @@ function changeLanguage(language) {
 
         const footerRights = document.querySelector('[data-key="footerRights"]'); 
         if (footerRights) {
-            footerRights.innerHTML = `&copy; 🤍Todos los Derechos Reservados 2025🇵🇪 &copy;`;
+            footerRights.innerHTML = `&copy; Todos los Derechos Reservados &copy;`;
             //footerRights.innerText = `© Todos los Derechos Reservados 2025 ©`;// 
         }
 

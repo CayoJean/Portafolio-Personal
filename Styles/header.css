@@ -541,7 +541,6 @@ body.dark-mode #theme-toggle .fa-moon {
 /* RESPONSIVE - Solo mostrar separadores horizontales en pantallas móviles */
 @media screen and (max-width: 768px) {
     /* Separadores horizontales solo en móviles */
-    /* Separadores horizontales solo en móviles */
     .nav-menu li:not(:last-child)::after {
         content: "";
         display: block; /* La línea será un bloque */
@@ -599,15 +598,14 @@ body.dark-mode #theme-toggle .fa-moon {
         justify-content: flex-start; /* Alinea todo al inicio */
     }
     .logo img {
-        margin-left: -155px; /* Reduce la distancia al borde en móvil */
+        margin-left: -160px; /* Reduce la distancia al borde en móvil */
     }
 
     .logo h1 {
         position: absolute;
-        top: 30%; /* Ajusta para centrar verticalmente */
-        left: 58px; /* Controla la distancia desde el borde izquierdo */
+        top: 35%; /* Ajusta para centrar verticalmente */
+        left: 70px; /* Controla la distancia desde el borde izquierdo */
         transform: translateY(-50%);
-        margin: 0;
         font-size: 18px !important; /* Forzar el tamaño */
     }
 
@@ -649,5 +647,25 @@ header {
     transition: background-color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease; /* Suaviza las transiciones de color y sombra */
 }
 }
+
+
+
+
+/* Móvil pequeño: 360px */
+@media screen and (max-width: 360px) {
+    .logo img {
+        margin-left: -158px; /* Reduce la distancia al borde en móvil */
+    }
+
+    .logo h1 {
+        position: absolute;
+        top: 35%; /* Ajusta para centrar verticalmente */
+        left: 55px; /* Controla la distancia desde el borde izquierdo */
+        transform: translateY(-50%);
+        font-size: 18px !important; /* Forzar el tamaño */
+    }
+}
+
+
 
 
