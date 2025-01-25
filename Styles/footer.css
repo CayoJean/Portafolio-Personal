@@ -16,4 +16,5 @@ footer p {
     font-weight: bold;
     margin: 8px; /* Elimina el margen de los párrafos */
     padding: 0; /* Elimina el padding de los párrafos */
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
 }

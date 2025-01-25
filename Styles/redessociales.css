@@ -92,8 +92,9 @@
     pointer-events: auto;
 }
 
-.coctato h2 {
+#contacto h2 {
     align-items: center;
+    font-family: cursive;
 }
 
 
@@ -207,7 +208,7 @@
 }
 
 .redesocial .github:hover {
-    background-color: #833ab4;
+    background-color: #9900ff;
 }
 
 .redesocial .github:hover a {
@@ -216,7 +217,7 @@
 
 .redesocial .github:hover .tooltip,
 .redesocial .github:hover .tooltip::before {
-    background: #833ab4;
+    background: #9900ff;
     color: #ffffff;
 }
 
@@ -339,7 +340,7 @@
 
 .redesocial .icon:hover {
     transform: scale(1.1); /* Efecto suave al pasar el cursor */
-    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 0px 15px rgb(51, 255, 0);
 }
 
 .redesocial .icon:hover .tooltip {
@@ -399,6 +400,10 @@
         width: 100%; /* Asegura que el contenedor ocupe todo el ancho disponible */
         margin: 0 auto; /* Centra el contenedor dentro de su padre */
         margin-left: -40px;
+    }
+
+    .redesocial > *:nth-last-child(1):nth-child(3n + 1) {
+        grid-column: 2; /* Hace que el último ícono ocupe la segunda columna si está solo */
     }
 
     .redesocial li {

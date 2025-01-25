@@ -42,7 +42,7 @@ function changeLanguage(language) {
 
         const developerDescription = document.querySelector('[data-key="developerDescription"]');
         if (developerDescription) {
-            developerDescription.innerText = 'Desarrollador apasionado por la tecnología, Amante de la creatividad y la innovación, Explorando siempre nuevos desafíos.';
+            developerDescription.innerText = 'Desarrollador apasionado por la tecnología, amante de la creatividad y la innovación, explorando siempre nuevos desafíos.';
         }
 
         const navigationHint = document.querySelector('[data-key="navigationHint"]');
@@ -164,10 +164,10 @@ function changeLanguage(language) {
         // Cambiar a inglés (ejemplo)
         document.querySelectorAll('.nav-link').forEach(function(link) {
             const key = link.getAttribute('data-key');
-            if (key === 'navInicio') link.innerText = 'Home';
-            if (key === 'navAcerca') link.innerText = 'About Me';
-            if (key === 'navHabilidades') link.innerText = 'Skills';
-            if (key === 'navContacto') link.innerText = 'Contacts';
+            if (key === 'navInicio') link.innerText = '<Home/>';
+            if (key === 'navAcerca') link.innerText = '<About Me/>';
+            if (key === 'navHabilidades') link.innerText = '<Skills/>';
+            if (key === 'navContacto') link.innerText = '<Contacts/>';
         });
 
         // Traducir el texto de la disponibilidad para trabajar
@@ -184,7 +184,7 @@ function changeLanguage(language) {
 
         const developerDescription = document.querySelector('[data-key="developerDescription"]');
         if (developerDescription) {
-            developerDescription.innerText = 'Passionate developer about technology, Lover of creativity and innovation, Always exploring new challenges.';
+            developerDescription.innerText = 'Passionate developer about technology, lover of creativity and innovation, always exploring new challenges.';
         }
 
         const navigationHint = document.querySelector('[data-key="navigationHint"]');
@@ -200,7 +200,7 @@ function changeLanguage(language) {
         // Traducir "Acerca de mí"
         const aboutMeTitle = document.querySelector('[data-key="aboutMeTitle"]');
         if (aboutMeTitle) {
-            aboutMeTitle.innerText = 'About Me';
+            aboutMeTitle.innerText = '< About Me />';
         }
 
         const aboutMeDescription = document.querySelector('[data-key="aboutMeDescription"]');
@@ -218,7 +218,7 @@ function changeLanguage(language) {
         // Traducir "Habilidades"
         const technicalSkillsTitle = document.querySelector('[data-key="technicalSkillsTitle"]');
         if (technicalSkillsTitle) {
-            technicalSkillsTitle.innerText = 'Technical Skills';
+            technicalSkillsTitle.innerText = '< Technical Skills />';
         }
 
 
@@ -269,7 +269,7 @@ function changeLanguage(language) {
         // Traducir "Contactos"
         const contactTitle = document.querySelector('[data-key="contactsTitle"]');
         if (contactTitle) {
-            contactTitle.innerText = 'Contacts';
+            contactTitle.innerText = '< Contacts />';
         }
 
         // Traducir Footer
@@ -310,3 +310,48 @@ function changeLanguage(language) {
         element.classList.add('falling-text');
     });
 }
+
+
+
+// Traducciones
+const translations = {
+    en: {
+        Inicio: '<Home/>',
+        AcercaDeMi: '<About Me/>',
+        Habilidades: '<Skills/>',
+        Contactos: '<Contacts/>'
+    },
+    es: {
+        Inicio: '<Inicio/>',
+        AcercaDeMi: '<Acerca de Mí/>',
+        Habilidades: '<Habilidades/>',
+        Contactos: '<Contactos/>'
+    }
+};
+
+// Función para traducir
+function translateMenu(language) {
+    document.querySelectorAll('.nav-link').forEach(function(link) {
+        const key = link.getAttribute('data-key');
+        const span = link.querySelector('span');
+        if (key && span) {
+            span.innerText = translations[language][key];
+        }
+    });
+    // Guardar idioma en localStorage
+    localStorage.setItem('language', language);
+}
+
+// Cargar idioma guardado al iniciar la página
+document.addEventListener('DOMContentLoaded', function() {
+    const savedLanguage = localStorage.getItem('language') || 'es'; // por defecto 'es'
+    translateMenu(savedLanguage);
+});
+
+// Botones de idioma
+document.getElementById('btn-es').addEventListener('click', function () {
+    translateMenu('es');
+});
+document.getElementById('btn-en').addEventListener('click', function () {
+    translateMenu('en');
+});

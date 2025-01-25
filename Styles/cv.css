@@ -46,25 +46,39 @@
 
 
 
-/* Botón */
+/* Botón (aplica a ambos modos por defecto) */
 .cv-button {
-    border: none;              /* Sin borde */
-    padding: 10px 20px;        /* Tamaño del botón */
-    border-radius: 5px;        /* Bordes redondeados */
-    cursor: pointer;           /* Cambia el cursor al pasar */
-    position: relative;        /* Relativa para mover el botón */
-    top: -40px;                /* Mueve el botón hacia arriba */
-    font-size: 18px;           /* Tamaño del texto */              /* Texto negro por defecto */
+    border: none; /* Sin borde */
+    padding: 10px 20px; /* Tamaño del botón */
+    border-radius: 40px; /* Bordes redondeados */
+    cursor: pointer; /* Cambia el cursor al pasar */
+    position: relative; /* Relativa para mover el botón */
+    top: -40px; /* Mueve el botón hacia arriba */
+    font-size: 18px; /* Tamaño del texto */
+    color: white; /* Texto blanco */
+    font-family: cursive;
     background-color: #007bff; /* Fondo azul por defecto */
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
 
+/* Hover (aplica a ambos modos por defecto) */
 .cv-button:hover {
-    background-color: #48ff00; /* Cambio de color al pasar el cursor */
+    background-color: #48ff00; /* Fondo verde brillante */
+    box-shadow: 0px 0px 50px rgb(43, 255, 0); /* Sombra más brillante */
 }
 
+
+/* ES para la X de cerrar el modal */
 .close-btn:hover {
     background-color: #00ff00;
 }
+
+/* Modo claro: mantiene el mismo efecto */
+body.light-mode .cv-button:hover {
+
+    box-shadow: 0px 0px 40px rgb(255, 0, 0); /* Sombra más brillante */
+}
+
 
 
 /* Estilos del iframe para mostrar el PDF */
@@ -84,7 +98,7 @@
     .cv-button {
         border: none;              /* Sin borde */
         padding: 10px 20px;        /* Tamaño del botón */
-        border-radius: 5px;        /* Bordes redondeados */
+        border-radius: 40px;        /* Bordes redondeados */
         cursor: pointer;           /* Cambia el cursor al pasar */
         position: relative;        /* Relativa para mover el botón */
         top: -50px;                /* Mueve el botón hacia arriba */

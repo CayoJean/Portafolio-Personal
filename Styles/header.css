@@ -66,7 +66,7 @@ body.dark-mode header a {
 }
 
 
-/*ES PARA EL PUNTO AL COSTADODE LA FOTO*/
+/*ES PARA EL PUNTO AL COSTADO DE LA FOTO*/
 .profile {
     position: relative; /* Contenedor relativo para posicionar el punto */
 }
@@ -77,7 +77,7 @@ body.dark-mode header a {
     right: 12px; /* Ajusta ligeramente la posición horizontal */
     width: 8px; /* Tamaño del punto */
     height: 8px;
-    background-color: #4caf50; /* Verde para "conectado" */
+    background-color: #3cff00; /* Verde para "conectado" */
     border: 1px solid #fff; /* Borde blanco para contraste */
     border-radius: 50%; /* Hace el punto circular */
 }
@@ -105,6 +105,7 @@ body.dark-mode header a {
     margin: 0; /* Sin márgenes adicionales */
     transition: color 0.3s ease; /* Transición suave para el cambio de color */
     margin-left: -15px;
+    font-family: cursive;
 }
 
 /* Modo claro */
@@ -122,13 +123,13 @@ body.dark-mode .logo h1 {
 
 
 /* Inicio de Menú de navegación */
+/* Menú de navegación */ 
 .nav-menu {
-    flex-grow: 1; /* Expande el menú para ocupar espacio disponible */
     display: flex;
-    flex-direction: column; /* Opciones y botón en columna */
+    justify-content: center;
     align-items: center;
-    gap: 20px; /* Espaciado entre opciones y botón */
-    text-align: center;
+    padding: 20px 0;
+    margin-left: -180px;
 }
 
 .nav-menu ul {
@@ -136,88 +137,82 @@ body.dark-mode .logo h1 {
     margin: 0;
     padding: 0;
     display: flex;
-    justify-content: center; /* Centra las opciones del menú */
-    gap: 20px;               /* Espaciado entre elementos del menú */
+    gap: 20px; /* Espaciado entre los íconos */
 }
 
 .nav-menu a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60px;
+    height: 60px;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    text-align: center;
     text-decoration: none;
-    font-size: 25px;
-    color: #000000;
-    transition: color 0.3s;
+    margin-top: -15px;
+    font-size: 24px;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.nav-menu a span {
+    display: none; /* Oculta el texto por defecto */
+    position: absolute;
+    white-space: nowrap;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 19px;
+    font-family: cursive;
+    font-weight: bold;
+    
 }
 
 .nav-menu a:hover {
-    color: #fe3b00; /* Color al pasar el mouse del MENU*/
+    width: 140px;
+    border-radius: 40px;
+    box-shadow: 0px 0px 50px rgb(43, 255, 0); /* Sombra más brillante */
+    background-color: #48ff00;
+    justify-content: flex-start;
+    padding-left: 20px;
+    border: 1px solid #f0f0f0; /* Borde fino para definir el botón */
+}
+
+.nav-menu a:hover span {
+    color: #ffffff;
+    display: inline-block; /* Muestra el texto al pasar el mouse */
+}
+
+.nav-menu a:hover i {
+    margin-right: 10px;
+    transform: scale(0);
+    transition: transform 0.3s ease;
+}
+
+/* color del borde al pasar el mouse de los iconos en modo claro*/
+body.light-mode .nav-menu a:hover {
+    box-shadow: 0px 0px 50px rgb(255, 0, 0); /* Sombra más brillante */
+    border: 1px solid #f0f0f0; /* Borde fino para definir el botón */
 }
 
 
-/* INICIO DE LAS LÍNEAS PARA SEPARAR LOS ELEMENTOS DEL MENÚ DE NAVEGACIÓN */
-.nav-menu li:not(:last-child)::after {
-    content: "";
-    display: inline-block;
-    width: 5px;
-    height: 20px;
-    background-color: #000000; /* Color negro por defecto */
-    margin-left: 8px;
-    margin-right: -12px;
-    animation: fadeInOut 1.5s infinite; /* Efecto de parpadeo */
-    transition: background-color 0.3s ease; /* Transición para el cambio de color */
+/* Borde en modo claro */
+body.light-mode .nav-menu a {
+    border-color: #000; /* Cambia a borde negro */
 }
 
-/* Modo claro */
-body.light-mode .nav-menu li:not(:last-child)::after {
-    background-color: #000000; /* Color negro en modo claro */
+/*Es para el color de texto en modo claro*/
+body.light-mode .nav-menu span {
+    color: #000;
+    border-color: #000000; /* Cambia a borde negro */
 }
-
-/* Modo oscuro */
-body.dark-mode .nav-menu li:not(:last-child)::after {
-    background-color: #ffffff; /* Color blanco en modo oscuro */
-}
-
-@keyframes fadeInOut {
-    0%, 100% {
-        opacity: 0.2;
-    }
-    50% {
-        opacity: 1;
-    }
-}/* FIN DE SEPARADOR */
-
 /* Fin del Menú de navegación */
 
 
 
-
 /* INICIO DE LOS Estilos del botón "Disponible para trabajar" */
-
-/* Estilos generales para el enlace de disponibilidad */
-.availability-link {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-decoration: none;
-    padding: 10px 20px;
-    border-radius: 30px;
-    font-size: 16px; /* Tamaño de fuente más adecuado */
-    font-weight: bold;
-    transition: color 0.3s ease, background-color 0.3s ease; /* Solo cambia el color y fondo */
-    /* background-color: #007bff;  Fondo del botón, se mantiene constante */
-}
-
-
-
-/* Cambio de color al pasar el mouse sobre el texto de disponibilidad para trabajar */
-.availability-link:hover .availability-bubble span {
-    color: #28c701; /* Puedes poner cualquier color que desees */
-}/*FIN*/
-
-
-/* Estilos para el texto (cambiar según el tema) */
-.availability-link span {
-    color: var(--button-text-color); /* Color de texto según el tema */
-}
-
 /* Modo oscuro */
 body.dark-mode .availability-link span {
     color: #ffffff; /* Texto blanco en modo oscuro */
@@ -230,39 +225,121 @@ body.light-mode .availability-link span {
 
 
 /*INICIO DE BOTón "Disponible para trabajar"*/
-/* Estilos para la burbuja de disponibilidad */
-.availability-bubble {
-    display: flex;
-    align-items: center;
-    gap: 10px;
+
+.nav-menu .availability-link:hover span {
+    opacity: 1; /* Asegura que el icono/texto se vuelva visible */
 }
 
-.availability-bubble .circle {
-    width: 20px;
-    height: 20px;
-    background-color: #3cff00; /* Color de la burbuja */
+
+/* Círculo con animación de pulso */
+.nav-menu .availability-link .circle {
+    width: 37px;
+    height: 37px;
+    background-color: #3cff00; /* Color del círculo */
     border-radius: 50%;
-    animation: pulse 1.5s infinite;
+    position: absolute; /* Para centrar dentro del contenedor */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Centra perfectamente el círculo */
+    animation: pulse 1.5s infinite; /* Efecto de pulso */
+    transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
 /* Animación de pulso */
 @keyframes pulse {
     0%, 100% {
-        transform: scale(1);
+        transform: translate(-50%, -50%) scale(1);
         opacity: 1;
     }
     50% {
-        transform: scale(1.5);
+        transform: translate(-50%, -50%) scale(1.5); /* Aumenta el tamaño */
         opacity: 1;
     }
 }
+
+/* Texto dentro del botón */
+.nav-menu .availability-link span {
+    font-size: 18px;
+    font-family: cursive;
+    font-weight: bold;
+    opacity: 0; /* Oculta el texto inicialmente */
+    position: absolute; /* Centrado dentro del botón */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Centrado exacto */
+    transition: opacity 0.3s ease;
+    white-space: nowrap;
+}
+
+/* Efecto hover: el botón se expande */
+.nav-menu .availability-link:hover {
+    width: 200px; /* Expande el botón horizontalmente */
+    border-radius: 30px; /* Cambia a una cápsula */
+    background-color: #48ff00; /* Cambia el color del fondo */
+    justify-content: flex-start; /* Alinea el contenido a la izquierda */
+    padding-left: 20px; /* Espacio para el texto */
+}
+
+/* Efecto hover: oculta el círculo */
+.nav-menu .availability-link:hover .circle {
+    transform: scale(0); /* Reduce el tamaño del círculo */
+    opacity: 0; /* Hace invisible el círculo */
+}
+
+/* Efecto hover: muestra el texto */
+.nav-menu .availability-link:hover span {
+    opacity: 1; /* Hace visible el texto */
+}
+
+
 /* FIN del botón "Disponible para trabajar" */
+
+/* INICIO DE LAS LÍNEAS PARA SEPARAR LOS ELEMENTOS DEL MENÚ DE NAVEGACIÓN
+.nav-menu li:not(:last-child)::after {
+    content: "";
+    margin-top: -5px;
+    display: inline-block;
+    width: 5px;
+    height: 25px;
+    background-color: #000000; /* Color negro por defecto
+    margin-left: 80px;
+    margin-right: -12px;
+    animation: fadeInOut 1.5s infinite; /* Efecto de parpadeo
+    transition: background-color 0.3s ease; /* Transición para el cambio de color
+} 
+*/
+
+/* Modo claro
+body.light-mode .nav-menu li:not(:last-child)::after {
+    background-color: #000000; /* Color negro en modo claro
+}
+
+/* Modo oscuro 
+body.dark-mode .nav-menu li:not(:last-child)::after {
+    background-color: #ffffff; /* Color blanco en modo oscuro
+}
+
+@keyframes fadeInOut {
+    0%, 100% {
+        opacity: 0.2;
+    }
+    50% {
+        opacity: 1;
+    }
+}/* FIN DE SEPARADOR 
+*/
+
+/* Fin del Menú de navegación */
+
+
+
+
 
 
 
 
 /*INICO DE LOS ICONOS DE IDIOMAS*/
-#language-switcher {
+/* #language-switcher {
     position: absolute;
     top: 20px;
     right: 20px;
@@ -272,9 +349,13 @@ body.light-mode .availability-link span {
     gap: 4px;
     margin: 12px 40px;
     padding: 14px 50px;
+    box-shadow: 0 4px 15px rgb(255, 0, 0);
 }
+ */
 
-.circle-icon {
+
+
+/* .circle-icon {
     width: 25px;
     height: 25px;
     border-radius: 50%;
@@ -285,7 +366,7 @@ body.light-mode .availability-link span {
     border: 2px solid #ddd;
     transition: transform 0.3s, box-shadow 0.3s;
     cursor: pointer;
-}
+} */
 
 .circle-icon svg {
     width: 80%;
@@ -424,7 +505,7 @@ button:hover {
     background-color: #000; /* Fondo negro por defecto */
     color: #fff; /* Ícono blanco por defecto */
     cursor: pointer; /* Cursor de clic */
-    transition: background-color 0.3s ease, color 0.3s ease; /* Transiciones suaves */
+    
 }
 
 /* Íconos en el botón */
@@ -489,8 +570,6 @@ body.dark-mode #theme-toggle .fa-moon {
 
 /* RESPONSIVE */
 @media screen and (max-width: 768px) {
-    
-
     .availability-link {
         
         font-size: 30px; /* Tamaño de fuente más adecuado */
@@ -507,32 +586,7 @@ body.dark-mode #theme-toggle .fa-moon {
         margin-top: 60px; /* Desplaza hacia abajo con el margen superior */
     }
 
-    .availability-bubble .circle {
-        width: 20px;
-        height: 20px;
-        background-color: #3cff00;
-        /* Color de la burbuja */
-        border-radius: 50%;
-        animation: pulse 1.5s infinite;
-    }
-
-    /* Animación de pulso */
-    @keyframes pulse {
-
-        0%,
-        100% {
-            transform: scale(1);
-            opacity: 1;
-        }
-
-        50% {
-            transform: scale(1.5);
-            opacity: 1;
-        }
-    }
-
     /* FIN del botón "Disponible para trabajar" */
-
 }
 
 
@@ -540,17 +594,19 @@ body.dark-mode #theme-toggle .fa-moon {
 
 /* RESPONSIVE - Solo mostrar separadores horizontales en pantallas móviles */
 @media screen and (max-width: 768px) {
-    /* Separadores horizontales solo en móviles */
+    /* /* Separadores horizontales solo en móviles
     .nav-menu li:not(:last-child)::after {
         content: "";
-        display: block; /* La línea será un bloque */
-        width: 80%; /* Ajusta el ancho de la línea */
-        height: 2px; /* Grosor de la línea */
-        background-color: #000000; /* Color del separador */
-        margin: 15px auto; /* Centra horizontalmente la línea y ajusta espacio arriba/abajo */
-        animation: fadeInOut 1.5s infinite; /* Efecto de parpadeo */
-        transition: background-color 0.3s ease; /* Transición para el cambio de color */
-    }
+        display: block; /* La línea será un bloque
+        width: 50%; /* Ajusta el ancho de la línea
+        height: 2px; /* Grosor de la línea
+        margin-left: -50px;
+        top: 50%;
+        background-color: #000000; /* Color del separador
+        margin: 10px auto; /* Centra horizontalmente la línea y ajusta espacio arriba/abajo
+        animation: fadeInOut 1.5s infinite; /* Efecto de parpadeo
+        transition: background-color 0.3s ease; /* Transición para el cambio de color
+    } */
 
     /* Asegúrate de que la lista esté centrada */
     .nav-menu {
@@ -560,6 +616,7 @@ body.dark-mode #theme-toggle .fa-moon {
     }
 
     .nav-menu li {
+        margin-top: 10px; /* Espacio entre los ítems */
         text-align: center; /* Centra el contenido del ítem */
         width: 100%; /* Asegura que cada ítem ocupe todo el ancho disponible */
     }
@@ -609,6 +666,7 @@ body.dark-mode #theme-toggle .fa-moon {
         font-size: 18px !important; /* Forzar el tamaño */
     }
 
+    /*es para el punto alado de la foto*/
     .profile {
         position: relative; /* Contenedor relativo para posicionar el punto */
     }
@@ -616,10 +674,10 @@ body.dark-mode #theme-toggle .fa-moon {
     .status-dot {
         position: absolute;
         bottom: 5px; /* Alinea al borde inferior */
-        right: 110px; /* Ajusta ligeramente la posición horizontal */
+        right: 113px; /* Ajusta ligeramente la posición horizontal */
         width: 8px; /* Tamaño del punto */
         height: 8px;
-        background-color: #4caf50; /* Verde para "conectado" */
+        background-color: #3cff00; /* Verde para "conectado" */
         border: 1px solid #fff; /* Borde blanco para contraste */
         border-radius: 50%; /* Hace el punto circular */
     }
@@ -665,7 +723,3 @@ header {
         font-size: 18px !important; /* Forzar el tamaño */
     }
 }
-
-
-
-

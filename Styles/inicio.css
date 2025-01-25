@@ -20,6 +20,7 @@
     font-size: 1rem; 
     margin: 0 auto; 
     width: 40%; 
+    font-family: cursive;
     display: flex; 
     justify-content: center; 
     flex-wrap: wrap; /* Permite que los elementos se envuelvan a la siguiente línea si no caben */
@@ -134,8 +135,12 @@
 
 /* Agrega un efecto de sombra al pasar el mouse */
 .gmail-link:hover i {
-    text-shadow: 0 4px 10px rgba(0, 255, 204, 0.7);
+    text-shadow: 0 0px 30px rgb(0, 255, 204);
 }
+
+
+
+/* Cambiar el color de los íconos de Gmail */
 
 
 
@@ -160,7 +165,11 @@
 
 /* Agrega un efecto de sombra al pasar el mouse */
 .linkedin:hover i {
-    text-shadow: 0 4px 10px rgba(0, 255, 204, 0.7);
+    text-shadow: 0 0px 30px rgb(0, 255, 204);
+}
+
+body.light-mode .linkedin:hover i{
+    text-shadow: 0px 0px 15px rgb(0, 255, 234); /* Sombra más brillante */
 }
 
 
@@ -188,7 +197,11 @@
 
 /* Agrega un efecto de sombra al pasar el mouse */
 .github:hover i {
-    text-shadow: 0 4px 10px rgba(0, 255, 204, 0.7);
+    text-shadow: 0 0px 30px rgb(0, 255, 204);
+}
+
+body.light-mode .github:hover i{
+    text-shadow: 0px 0px 20px rgb(255, 0, 0); /* Sombra más brillante */
 }
 
 /*FIN DE LOS ICONOS*/
@@ -225,6 +238,7 @@
 /* Botón de Desplácese hacia abajo */
 .scroll-down-btn {
     position: absolute;
+    margin-left: -16px;  /* ES PARA PONER O MOVER A LA DERECHA O IZQUIERDA EL BOTON en la izquierda */
     justify-content: center; /* Posición en la izquierda */
     bottom: 15px; /* Ajusta la distancia desde la parte inferior */
     display: flex;
@@ -295,6 +309,3 @@
             margin-top: 10px; /* Ajusta la distancia entre íconos y botón */
         }
 }
-
-
-

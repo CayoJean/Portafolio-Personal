@@ -11,7 +11,7 @@
 @import url('efectomovimientogeneral.css');
 @import url('loadercarga.css');
 @import url('particules.css');
-
+@import url('menuinteractivo.css');
 
 body {
     user-select: none;
@@ -24,7 +24,7 @@ body {
 
 
 /* Ocultar el botón de menú en pantallas grandes */
-@media screen and (min-width: 769px) {
+@media screen and (min-width: 768px) {
     .menu-toggle {
         display: none; /* Oculta el botón de menú en pantallas grandes */
     }
@@ -32,12 +32,12 @@ body {
 
 
 
-/* RESPONSIVE */
+/* RESPONSIVE DE ICONO HAMBURGUESA Y LA X*/
 @media screen and (max-width: 768px) {
     /* Botón hamburguesa visible */
     .menu-toggle {
         display: block;
-        color: red; /* Color del ícono */
+        color: rgb(43, 255, 0); /* Color del ícono */
         position: absolute;
         top: 40px; /* Mantiene la misma posición debajo del botón de modos */
         right: 8px; /* Alinea el botón hacia la derecha dentro del header */
@@ -50,11 +50,28 @@ body {
         transition: transform 0.3s ease; /* Transición para el cambio de tamaño */
     }
 
+    /* Sirve para quitar el fondo de los iconos al pasar el Mause*/
     .menu-toggle:hover,
     .menu-toggle:focus {
-        background: none; /* Elimina cualquier fondo que aparezca en hover o focus */
-        outline: none; /* Asegura que no haya borde de enfoque */
-        transform: scale(1.2); /* Aumenta el tamaño del ícono al pasar el mouse */
+        background: none !important; /* Asegúrate de que no tenga fondo */
+        outline: none; /* Quita el borde de enfoque */
+        transform: scale(1.2); /* Solo cambia el tamaño al pasar el mouse */
+    }
+
+
+    /* Cambia el ícono de hamburguesa a "X" */
+    .menu-toggle.active::before {
+        content: "\f00d"; /* Unicode para el ícono "X" de FontAwesome */
+        color: red;
+        font-family: "Font Awesome 5 Free";
+        font-weight: 800;
+        font-size: 34px;
+    }
+    .menu-toggle .hamburger-icon {
+        display: inline;
+    }
+    .menu-toggle.active .hamburger-icon {
+        display: none; /* Oculta el ícono de hamburguesa cuando está activo */
     }
 
     /* Botón de Modo Oscuro/Claro */
@@ -71,16 +88,12 @@ body {
         transition: color 0.3s ease;
     }
 
-    #theme-toggle:hover {
-        color: #ff4747; /* Cambiar color al pasar el mouse */
-    }
-
     /* Menú desplegable superpuesto */
     .nav-menu {
         display: none;
         position: fixed; /* Fija el menú sin afectar al contenido */
         top: 125px; /* Ajusta la posición debajo del header */
-        left: 0;
+        margin-left: 10px; /* Ajusta la distancia desde el borde a la izquierdo y derecha */
         border-radius: 35px;
         width: 100%; /* Ocupa todo el ancho */
         height: calc(100% - 125px); /* Ajusta la altura */
@@ -112,11 +125,7 @@ body {
         font-size: 1.8rem; /* Tamaño específico del texto */
         text-decoration: none;
         color: white;
-        transition: color 0.3s ease;
-    }
-
-    .nav-menu ul li a:hover {
-        color: #ff4747; /* Color al pasar el mouse */
+        transition: color 0.3s ease; /* Cambia solo el color sin fondo */
     }
 
     /* Logo */
@@ -144,5 +153,21 @@ body {
         align-items: flex-end; /* Alineado a la derecha */
         gap: 10px;
         margin-right: 20px;
+    }
+}
+
+
+/* Media query para pantallas pequeñas (por ejemplo, móviles) */
+@media (max-width: 768px) {
+
+    .nav-menu a {
+        display: inline-block;
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        text-align: center;
+        line-height: 56px; /* Centra verticalmente el contenido del enlace */
+        transition: all 0.3s ease;
+        margin: -5px; /* Ajusta el valor según tus necesidades */
     }
 }
