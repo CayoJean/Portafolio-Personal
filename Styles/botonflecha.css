@@ -17,21 +17,21 @@
 }
 
 .scroll-to-top.show {
-    opacity: 1;
+    opacity: 5;
     visibility: visible;
     animation: pulsate 1.5s infinite; /* Animación de brillo */
 }
 
 #scrollToTop:hover {
-    background-color: #00ffff; /* Color cuando el mouse pasa sobre el ícono */
+    background-color: #ff0000; /* Color cuando el mouse pasa sobre el ícono */
 }
 
 @keyframes pulsate {
     0%, 100% {
-        box-shadow: 0 0 20px rgba(33, 150, 243, 0.7);
+        box-shadow: 0 0 20px rgb(0, 47, 255);
     }
     50% {
-        box-shadow: 0 0 20px rgb(255, 0, 0);
+        box-shadow: 0 0 20px rgb(9, 255, 0);
     }
 }
 
@@ -40,10 +40,11 @@
 /* Estilo para el ícono en modo oscuro */
 @media (prefers-color-scheme: dark) {
     #scrollToTop {
+        border-radius: 80px;
         color: #fff; /* Color en modo oscuro */
     }
 
     #scrollToTop:hover {
-        background-color: #002fff; /* Color en modo oscuro cuando pasa el mouse */
+        background-color: #ff0000; /* Color en modo oscuro cuando pasa el mouse */
     }
 }

@@ -1,8 +1,19 @@
 #particles-js {
-    position: fixed;  /* Fijo para que no se mueva al hacer scroll */
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    z-index: -1; /* Asegura que las partículas estén detrás del contenido */
+    
+    background-image: none;
+    background-size: cover;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    z-index: -1;
+}
+
+body.dark-mode #particles-js {
+    /* Aquí cambiamos el color de las partículas para modo oscuro */
+    -webkit-filter: invert(100%); /* Invierte los colores de las partículas */
+    filter: invert(100%);
 }
