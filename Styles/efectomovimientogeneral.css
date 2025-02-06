@@ -1,12 +1,50 @@
-.falling-text {
-    opacity: 0; /* Comienza invisible */
-    transform: translateY(-50px); /* Comienza más arriba */
-    animation: fallingAnimation 0.5s ease-out forwards;
-  }
-  
-  @keyframes fallingAnimation {
-    to {
-      opacity: 1; /* Se hace visible */
-      transform: translateY(0); /* Vuelve a su posición normal */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+.fade-out {
+  opacity: 0;
+  transform: translateY(-20px);
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+
+
+body {
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+  background-image: url('tu-imagen.png');
+  background-repeat: no-repeat;
+  background-position: left center, right center;
+  background-size: 20px 100%;
+}
+
+
+
+
+
+
+
+
+@keyframes fallDown {
+    from {
+        transform: translateY(-100px);
+        opacity: 0;
     }
-  }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.header-fall {
+    animation: fallDown 1s ease-out;
+}

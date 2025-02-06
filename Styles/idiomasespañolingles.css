@@ -33,6 +33,21 @@
 }
 
 
+/*Es para que el icono no se pueda seleccionar*/
+.circle-icon.active {
+    border-color: gray;
+    opacity: 0.6;
+    cursor: default;
+    pointer-events: none;
+}
+
+.circle-icon:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0px 30px rgb(102, 255, 0);
+}
+
+
+
 @media screen and (max-width: 768px) {
 
     #language-switcher {

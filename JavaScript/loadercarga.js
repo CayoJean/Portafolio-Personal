@@ -3,5 +3,5 @@ document.addEventListener('DOMContentLoaded', function() {
     setTimeout(function() {
         // Ocultar el loader después de 3.5 segundos
         document.getElementById('loader').style.display = 'none';
-    }, 3500); // 3.5 segundos de retraso
+    }, 200); // 3.5 segundos de retraso
 });
