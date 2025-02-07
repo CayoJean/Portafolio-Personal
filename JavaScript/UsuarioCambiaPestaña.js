@@ -5,7 +5,7 @@ const originalTitle = document.title;
 document.addEventListener('visibilitychange', () => {
     if (document.hidden) {
         // Si el usuario cambia de pestaña, cambiar el título
-        document.title = '¡Vuelve pronto! 😢';
+        document.title = '¡Vuelve Pronto! 😢';
     } else {
         // Cuando el usuario regresa a la pestaña, restaurar el título original
         document.title = originalTitle;

@@ -64,11 +64,11 @@ function changeLanguage(language) {
         const aboutMeDescription = document.querySelector('[data-key="aboutMeDescription"]');
         if (aboutMeDescription) {
             aboutMeDescription.innerText =
-            "Soy un Programador Full Stack Developer Junior, con conocimientos prácticos en Front-End (HTML, CSS y JAVASCRIPT)" +
+            "Soy un Programador Web Full-Stack Developer Jr, con conocimientos prácticos en Front-End (HTML, CSS y JAVASCRIPT)" +
             ", Back-End (JAVA, SPRING BOOT y SPRING SECURITY) y con capacidad de entender nuevas tecnologías rápidamente " +
             "y la facultad de trabajar en un entorno de equipo. Mi viaje en el mundo de la tecnología comenzó con una fascinación " +
             "por crear soluciones que no solo funcionan de manera eficiente, sino que también brindan una experiencia de usuario convincente. " +
-            "A medida que continúa mi viaje en el desarrollo Full Stack, siempre estoy buscando proyectos y oportunidades colaborativas " +
+            "A medida que continúa mi viaje en el desarrollo Full-Stack, siempre estoy buscando proyectos y oportunidades colaborativas " +
             "en los que pueda contribuir con mis habilidades y crecer tanto personal como profesionalmente. ¡Conectémonos y exploremos cómo " +
             "podemos crear algo increíble juntos!";
         }
@@ -206,13 +206,13 @@ function changeLanguage(language) {
         const aboutMeDescription = document.querySelector('[data-key="aboutMeDescription"]');
         if (aboutMeDescription) {
             aboutMeDescription.innerText =
-            "I am a Junior Full Stack Developer with practical knowledge in Front-End (HTML, CSS, and JAVASCRIPT) " +
-            "and Back-End (Java, Spring Boot, and Spring Security), with the ability to understand new technologies quickly " +
-            "and the capacity to work in a team environment. My journey into the world of technology began with a fascination " +
-            "for creating solutions that not only work efficiently but also provide a compelling user experience. As my journey " +
-            "continues in Full Stack development, I am always looking for projects and collaborative opportunities where I can " +
-            "contribute with my skills and grow both personally and professionally. Let's connect and explore how we can create " +
-            "something amazing together!";
+            "I am a Full-Stack Web Developer Jr Programmer, with practical knowledge in Front-End (HTML, CSS and JAVASCRIPT)" +
+            ", Back-End (JAVA, SPRING BOOT and SPRING SECURITY) and with the ability to understand new technologies quickly " +
+            "and the ability to work in a team environment. My journey in the world of technology began with a fascination" +
+            "for creating solutions that not only work efficiently, but also provide a compelling user experience." +
+            "As my journey in Full-Stack development continues, I am always looking for collaborative projects and opportunities" +
+            "where I can contribute my skills and grow both personally and professionally. Let's connect and explore how " +
+            "we can create something amazing together!";
         }
 
         // Traducir "Habilidades"
