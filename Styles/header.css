@@ -678,7 +678,7 @@ body.dark-mode #theme-toggle .fa-moon {
         width: 8px; /* Tamaño del punto */
         height: 8px;
         background-color: #3cff00; /* Verde para "conectado" */
-        border: 1px solid #fff; /* Borde blanco para contraste */
+        border: 3px solid #fff; /* Borde blanco para contraste */
         border-radius: 50%; /* Hace el punto circular */
     }
 }
