@@ -5,7 +5,7 @@
     justify-content: center;       /* Centra verticalmente */
     align-items: center;           /* Centra horizontalmente */
     height: 100vh;                 /* Toma toda la altura de la pantalla */
-    padding: 20px;                 /* Espaciado interno */
+    padding: 3px;                 /* Espaciado interno */
     text-align: center;            /* Centra el texto */
     /*background-color: #f9f9f9;     /* Fondo claro (ajústalo si tienes modo oscuro) */
 }

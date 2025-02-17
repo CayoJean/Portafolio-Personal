@@ -1,0 +1,69 @@
+.contador-container {
+    position: fixed;
+    bottom: 0;
+    left: -356px; /* Ajusta este valor para mover el contador más a la izquierda */
+    width: auto; /* Ancho automático para el fondo */
+    background-color: rgb(255, 0, 0);
+    padding: 4px; /* Ajusta este valor para reducir el tamaño del fondo */
+    margin: 475px; /* Ajusta este valor para reducir el margen */
+    z-index: 1000;
+    transition: transform 0.3s ease;
+    align-items: flex-end;
+    border-radius: 50px; /* Para redondear las esquinas del fondo */
+}
+
+#contador {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; /* Alinea los elementos a la izquierda */
+    width: auto;
+    font-family: monospace;
+    font-size: 15px;
+    margin-top: auto; /* Empuja el contador hacia la parte inferior */
+    margin: 0; /* Elimina el margen horizontal */
+    transition: width 0.3s ease;
+}
+
+/*es para separar el texto con el numero*/
+#contador span { /* Nuevo: se aplica el margen al span que contiene el número */
+    margin-left: 5px; /* Ajusta este valor para controlar el espacio */
+}
+
+/*Es para cambiar de color solo el numero*/
+#num-visitas {
+    color: rgb(0, 255, 242);
+    font-family: Arial;
+    font-weight: bold;
+}
+
+
+
+#contador img {
+    margin-right: 5px;
+}
+
+body.scrolled .contador-container {
+    transform: translateY(-100%);
+}
+
+body.scrolled #contador {
+    width: 100%;
+}
+
+
+/* Media query para dispositivos móviles */
+@media (max-width: 768px) { /* Ajusta el valor 768px al ancho de pantalla que desees */
+    .contador-container {
+        position: fixed;
+        bottom: 0;
+        left: 50px; /* Ajusta este valor para mover el contador más a la izquierda */
+        width: auto; /* Ancho automático para el fondo */
+        background-color: rgb(255, 0, 0);
+        padding: 10px; /* Ajusta este valor para reducir el tamaño del fondo */
+        margin: 60px; /* Ajusta este valor para reducir el margen */
+        z-index: 1000;
+        transition: transform 0.3s ease;
+        align-items: flex-end;
+        border-radius: 50px; /* Para redondear las esquinas del fondo */
+    }
+}

@@ -14,18 +14,18 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
 
-    
+
     <!-- es para que el texto escriba solo o actumatico-->
     <script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
 
 
 
     <!-- es para el fodo de las particulas -->
-    
+
 
     <!-- Incluir Font Awesome desde el CDN -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    
+
 
 
     <!-- Favicon para navegadores -->
@@ -37,6 +37,7 @@
 </head>
 
 <body>
+
 
     <!-- Contenedor de partículas -->
     <div id="particles-js"></div>
@@ -60,17 +61,18 @@
 
         <!-- logo principal del portafolio -->
         <div class="logo">
-            <a href="./index.html" class= "falling-text fade-in" id="profile" title="Cargar Portafolio">
+            <a href="./index.html" class="falling-text fade-in" id="profile" title="Cargar Portafolio">
                 <img src="./imagenes/foto.png" alt="Logo Store" class="falling-text fade-in">
                 <span class="status-dot"></span>
             </a>
             <h1 class="falling-text fade-in">Portafolio.👨‍💻</h1>
         </div>
-        
+
 
 
         <!-- Botón Hamburguesa para Móviles -->
-        <button class="menu-toggle falling-text fade-in" aria-label="Abrir menú" title="Menú Desplegable" id="menu-toggle">
+        <button class="menu-toggle falling-text fade-in" aria-label="Abrir menú" title="Menú Desplegable"
+            id="menu-toggle">
             <i class="fas fa-bars hamburger-icon"></i> <!-- Icono de hamburguesa -->
         </button>
 
@@ -80,34 +82,51 @@
         <!-- Menú de navegación -->
         <nav class="nav-menu">
             <ul>
-                <li><a href="#inicio" class="nav-link active falling-text fade-in" title="Clic Inicio" data-key="Inicio">
-                    <i class="fas fa-home"></i>
-                    <span>Inicio</span>
-                </a></li>
-                <li><a href="#acercademi" class="nav-link falling-text fade-in" title="Clic AcercaDeMí" data-key="AcercaDeMi">
-                    <i class="fas fa-user"></i>
-                    <span>Acerca de Mí</span>
-                </a></li>
-                <li><a href="#habilidades" class="nav-link falling-text fade-in" title="Clic Habilidades" data-key="Habilidades">
-                    <i class="fas fa-cogs"></i>
-                    <span>Habilidades</span>
-                </a></li>
-                <li><a href="#contacto" class="nav-link falling-text fade-in" title="Clic Contactos" data-key="Contactos">
-                    <i class="fas fa-phone"></i>
-                    <span>Contactos</span>
-                </a></li>
+                <li>
+                    <a href="#inicio" class="nav-link active falling-text fade-in" title="Clic Inicio" data-key="Inicio">
+                        <i class="fas fa-home"></i>
+                        <span>Inicio</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#acercademi" class="nav-link falling-text fade-in" title="Clic AcercaDeMí" data-key="AcercaDeMi">
+                        <i class="fas fa-user"></i>
+                        <span>Acerca de Mí</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#habilidades" class="nav-link falling-text fade-in" title="Clic Habilidades"
+                        data-key="Habilidades">
+                        <i class="fas fa-cogs"></i>
+                        <span>Habilidades</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#contacto" class="nav-link falling-text fade-in" title="Clic Contactos" data-key="Contactos">
+                        <i class="fas fa-phone"></i>
+                        <span>Contactos</span>
+                    </a>
+                </li>
                 <!-- Botón LinkedIn de disponibilidad de trabajo -->
                 <li>
-                    <a href="https://www.linkedin.com/in/cayo-jean/" class="nav-link availability-link falling-text fade-in" title="Clic Acceso a LinkedIn" target="_blank" rel="noopener noreferrer">
+                    <a href="https://www.linkedin.com/in/cayo-jean/" class="nav-link availability-link falling-text fade-in"
+                        title="Clic Acceso a LinkedIn" target="_blank" rel="noopener noreferrer">
                         <div class="circle"></div> <!-- Reemplaza el ícono por el círculo -->
                         <span>Disponible para trabajar</span>
                     </a>
                 </li>
-                
+                <!-- Contador de visitas -->
+                <li>
+                    <div class="contador-container contador-mobile falling-text fade-in" data-key="Visitas">
+                        <div id="contador">
+                            <img src="imagenes/vista.png" alt="" width="20" height="20">
+                            <span id="texto-visitas">Visitas:</span> <span id="num-visitas">0</span>
+                        </div>
+                    </div>
+                </li>
             </ul>
-    
         </nav>
-        
+
 
 
         <!-- ICONOS DE IDIOMAS ESPANOL Y ENGLISH -->
@@ -172,12 +191,15 @@
     <main>
         <!-- Inicio -->
         <section id="inicio">
-            <h1 class="falling-text fade-in" data-key="welcomeMessage">¡Hola! Soy Cayo Jean <span class="hand-icon">👋</span></h1>
-            
-            <h3 class="falling-text fade-in" data-key="developerDescription">Desarrollador Web apasionado por la tecnología,
+            <h1 class="falling-text fade-in" data-key="welcomeMessage">¡Hola! Soy Cayo Jean <span
+                    class="hand-icon">👋</span></h1>
+
+            <h3 class="falling-text fade-in" data-key="developerDescription">Desarrollador Web apasionado por la
+                tecnología,
                 amante de la creatividad y la innovación, explorando siempre nuevos desafíos.
             </h3>
-            <p class="falling-text fade-in" data-key="navigationHint">Utiliza los botones de arriba 👆 para navegar por el sitio
+            <p class="falling-text fade-in" data-key="navigationHint">Utiliza los botones de arriba 👆 para navegar por
+                el sitio
                 o desliza hacia abajo👇.
             </p>
 
@@ -189,8 +211,7 @@
                     </a>
 
                     <a class="linkedin falling-text fade-in" target="_blank"
-                        href="https://www.linkedin.com/in/cayo-jean/" aria-label="LinkedIn"
-                        title="LinkedIn">
+                        href="https://www.linkedin.com/in/cayo-jean/" aria-label="LinkedIn" title="LinkedIn">
                         <i class="fab fa-linkedin-in"></i>
                     </a>
                     <a class="github falling-text fade-in" target="_blank" href="https://github.com/CayoJean"
@@ -200,7 +221,8 @@
                 </div>
             </div>
 
-            <button class="btn btn-primary cv-button falling-text fade-in" onclick="openModal()" data-key="downloadCV" title="Clic Para Descargar">Descargar CV</button>
+            <button class="btn btn-primary cv-button falling-text fade-in" onclick="openModal()" data-key="downloadCV"
+                title="Clic Para Descargar">Descargar CV</button>
 
 
             <!-- Modal para mostrar el PDF -->
@@ -222,17 +244,18 @@
         <section id="acercademi" class="falling-text fade-in">
             <h2 class="falling-text fade-in" data-key="aboutMeTitle">Acerca De Mí</h2>
             <p class="falling-text fade-in" data-key="aboutMeDescription">
-                Soy un Programador Full-Stack Developer Jr, con conocimientos prácticos en Front-End (HTML, CSS y JAVASCRIPT), Back-End (JAVA, SPRING BOOT y SPRING SECURITY) 
-                y con capacidad de entender nuevas tecnologías rápidamente y la facultad de trabajar 
-                en un entorno de equipo. Mi viaje en el mundo de la 
-                tecnología comenzó con una fascinación por crear 
-                soluciones que no solo funcionan de manera eficiente, 
-                sino que también brindan una experiencia de usuario 
-                convincente. A medida que continúa mi viaje en el 
-                desarrollo Full-Stack, siempre estoy buscando proyectos 
+                Soy un Programador Full-Stack Developer Jr, con conocimientos prácticos en Front-End (HTML, CSS y
+                JAVASCRIPT), Back-End (JAVA, SPRING BOOT y SPRING SECURITY)
+                y con capacidad de entender nuevas tecnologías rápidamente y la facultad de trabajar
+                en un entorno de equipo. Mi viaje en el mundo de la
+                tecnología comenzó con una fascinación por crear
+                soluciones que no solo funcionan de manera eficiente,
+                sino que también brindan una experiencia de usuario
+                convincente. A medida que continúa mi viaje en el
+                desarrollo Full-Stack, siempre estoy buscando proyectos
                 y oportunidades colaborativas en los que pueda contribuir
-                con mis habilidades y crecer tanto personal como 
-                profesionalmente. ¡Conectémonos y exploremos cómo podemos 
+                con mis habilidades y crecer tanto personal como
+                profesionalmente. ¡Conectémonos y exploremos cómo podemos
                 crear algo increíble juntos!.
 
 
@@ -414,7 +437,7 @@
         </div>
 
     </footer>
-    
+
 
 
 
@@ -426,7 +449,7 @@
     <script src="JavaScript/botonflecha.js"></script>
     <script src="JavaScript/cvpestaña.js"></script>
     <script src="JavaScript/efectomovimientogeneral.js"></script>
-    
+
     <!-- <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script> -->
     <script src="JavaScript/modosclaroyoscuro.js"></script>
     <script src="JavaScript/loadercarga.js"></script>
@@ -434,6 +457,7 @@
 
     <script src="JavaScript/particules.js"></script>
     <script src="JavaScript/idiomasespañolingles.js"></script>
+    <script src="JavaScript/contador.js"></script>
 
 </body>
 

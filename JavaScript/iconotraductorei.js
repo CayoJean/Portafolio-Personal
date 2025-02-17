@@ -313,6 +313,73 @@ function changeLanguage(language) {
 
 
 
+
+
+
+
+
+
+
+
+
+
+// Al cargar la página, verifica si hay un idioma guardado en localStorage
+document.addEventListener("DOMContentLoaded", function() {
+    const savedLanguage = localStorage.getItem('language') || 'es';
+    translateVisitas(savedLanguage); // Traduce "Visitas" al cargar la página
+});
+
+// Eventos de clic para cambiar el idioma
+document.getElementById('btn-es').addEventListener('click', function() {
+    translateVisitas('es');
+});
+
+document.getElementById('btn-en').addEventListener('click', function() {
+    translateVisitas('en');
+});
+
+
+
+// Función para traducir "Visitas"
+function translateVisitas(language) {
+    const translations = {
+        es: { Visitas: "Visitas:" },
+        en: { Visitas: "Views:" }
+    };
+
+    const contadorElement = document.querySelector('#contador');
+    if (contadorElement) {
+      // 1. Obtener referencias a la imagen y contar el intervalo.
+        const imgElement = contadorElement.querySelector('img');
+        const countElement = contadorElement.querySelector('#num-visitas');
+
+      // 2. Borrar el contenido del elemento contador
+        contadorElement.innerHTML = '';
+
+      // 3. Vuelve a agregar la imagen
+        if (imgElement) {
+        contadorElement.appendChild(imgElement);
+        }
+
+      // 4. Agrega el texto traducido
+        contadorElement.appendChild(document.createTextNode(translations[language].Visitas + " "));
+
+      // 5. Vuelve a agregar el intervalo de conteo
+        if (countElement) {
+        contadorElement.appendChild(countElement);
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
 // Traducciones
 const translations = {
     en: {

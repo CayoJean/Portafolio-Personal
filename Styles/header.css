@@ -80,10 +80,38 @@ body.dark-mode header a {
     background-color: #3cff00; /* Verde para "conectado" */
     border: 3px solid #000000; /* Borde blanco para contraste */
     border-radius: 50%; /* Hace el punto circular */
+    animation: blink 1s infinite; /* Parpadeo cada segundo */
+}
+/*
+.status-dot {
+    position: absolute;
+    bottom: 5px;
+    right: 12px;
+    width: 8px;
+    height: 8px;
+    background-color: #3cff00;
+    border: 2px solid #000000;
+    border-radius: 50%;
+    animation: pulse-wave 1.5s infinite;
 }
 
-
-
+@keyframes pulse-wave {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    50% {
+        transform: scale(1.5);
+        opacity: 1.5;
+        
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+        box-shadow: none;
+    }
+}
+*/
 
 
 

@@ -5,7 +5,7 @@
     align-items: center; /* Centra los elementos horizontalmente */
     justify-content: center; /* Centra los elementos verticalmente */
     min-height: 100vh; /* Ocupa toda la altura de la pantalla */
-    padding: 80px; /* Espacio interno para evitar bordes pegados */
+    padding: 60px; /* Espacio interno para evitar bordes pegados */
 }
 
 /* Contenedor de tarjetas de habilidades */
