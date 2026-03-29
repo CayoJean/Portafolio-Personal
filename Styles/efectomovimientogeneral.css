@@ -21,10 +21,7 @@
 body {
   border-left: 20px solid transparent;
   border-right: 20px solid transparent;
-  background-image: url('tu-imagen.png');
-  background-repeat: no-repeat;
-  background-position: left center, right center;
-  background-size: 20px 100%;
+  /* background-image eliminado: archivo tu-imagen.png no existe */
 }
 
 

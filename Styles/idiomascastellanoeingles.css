@@ -1,0 +1,51 @@
+/* ---- LANGUAGE SWITCHER ---- */
+#language-switcher {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    flex-shrink: 0;
+    /* Quitar position absolute y padding enorme del original */
+    position: static !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    top: auto !important;
+    right: auto !important;
+}
+
+.circle-icon {
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #51ff00;
+    cursor: pointer;
+    flex-shrink: 0;
+    transition: opacity 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+    opacity: 1;
+}
+
+.circle-icon svg {
+    width: 160%;
+    height: 160%;
+}
+
+/* ---- ESTADO: disponible para clic (idioma no seleccionado) ---- */
+.circle-icon:not(.active):hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 12px rgb(102, 255, 0);
+}
+
+/* ---- ESTADO: seleccionado / bloqueado ---- */
+.circle-icon.active {
+    border: 2px solid #555 !important;
+    opacity: 0.4 !important;
+    cursor: not-allowed !important;
+    pointer-events: none !important;
+    box-shadow: none !important;
+    transform: scale(0.9) !important;
+    filter: grayscale(60%) !important;
+}
+

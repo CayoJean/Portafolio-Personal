@@ -63,18 +63,21 @@
     }
 
     /* Menú desplegable superpuesto */
+    /* Menú desplegable — position:fixed para que NO expanda el header */
     .nav-menu {
         display: none;
-        position: fixed; /* Fija el menú sin afectar al contenido */
-        top: 125px; /* Ajusta la posición debajo del header */
-        margin-left: 10px; /* Ajusta la distancia desde el borde a la izquierdo y derecha */
-        border-radius: 35px;
-        width: 100%; /* Ocupa todo el ancho */
-        height: calc(100% - 125px); /* Ajusta la altura */
-        background-color: rgba(0, 17, 255, 0.9); /* Fondo oscuro con opacidad */
+        position: fixed !important; /* Separado del flujo del header */
+        top: 72px;
+        left: 10px;
+        right: 10px;
+        width: calc(100% - 20px);
+        height: calc(100% - 80px);
+        margin: 0;
+        background-color: rgba(0, 17, 255, 0.9);
         text-align: center;
         padding-top: 20px;
-        z-index: 999; /* Asegura que esté por encima del contenido */
+        z-index: 999;
+        border-radius: 25px;
     }
 
     /* Cuando el menú está activo */

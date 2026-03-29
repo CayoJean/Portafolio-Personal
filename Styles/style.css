@@ -7,12 +7,13 @@
 @import url('footer.css');
 @import url('botonflecha.css');
 @import url('dezlisacambiadecolor.css');
-@import url('idiomasespañolingles.css');
+@import url('idiomascastellanoeingles.css');
 @import url('efectomovimientogeneral.css');
 @import url('loadercarga.css');
 @import url('particules.css');
 @import url('menuhamburgueza.css');
 @import url('contador.css');
+@import url('responsive.css');
 
 body {
     user-select: none;
