@@ -39,15 +39,6 @@
 
 <body>
 
-    <!-- Contador de visitas -->
-    <div class="contador-container contador-mobile" data-key="Visitas" style="position:fixed;bottom:20px;left:20px;">
-        <div id="contador">
-            <img src="imagenes/vista.png" alt="" width="20" height="20">
-            <span id="texto-visitas">Visitas:</span> <span id="num-visitas">0</span>
-        </div>
-    </div>
-
-</body>
 
     <!-- Contenedor de partículas -->
     <div id="particles-js"></div>
@@ -125,7 +116,15 @@
                         <span>Disponible Para Trabajar</span>
                     </a>
                 </li>
-                
+                <!-- Contador de visitas -->
+                <li>
+                    <div class="contador-container contador-mobile falling-text fade-in" data-key="Visitas">
+                        <div id="contador">
+                            <img src="imagenes/vista.png" alt="" width="20" height="20">
+                            <span id="texto-visitas">Visitas:</span> <span id="num-visitas">0</span>
+                        </div>
+                    </div>
+                </li>
             </ul>
         </nav>
 
